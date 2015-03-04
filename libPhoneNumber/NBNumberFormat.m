@@ -11,7 +11,7 @@
 @implementation NBNumberFormat
 
 
-- (id)initWithPattern:(NSString *)pattern withFormat:(NSString *)format withLeadingDigitsPatterns:(NSMutableArray *)leadingDigitsPatterns withNationalPrefixFormattingRule:(NSString *)nationalPrefixFormattingRule whenFormatting:(BOOL)nationalPrefixOptionalWhenFormatting withDomesticCarrierCodeFormattingRule:(NSString *)domesticCarrierCodeFormattingRule
+- (instancetype)initWithPattern:(NSString *)pattern withFormat:(NSString *)format withLeadingDigitsPatterns:(NSMutableArray *)leadingDigitsPatterns withNationalPrefixFormattingRule:(NSString *)nationalPrefixFormattingRule whenFormatting:(BOOL)nationalPrefixOptionalWhenFormatting withDomesticCarrierCodeFormattingRule:(NSString *)domesticCarrierCodeFormattingRule
 {
     self = [self init];
     
@@ -26,7 +26,7 @@
 }
 
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -70,7 +70,7 @@
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (instancetype)initWithCoder:(NSCoder*)coder
 {
     if (self = [super init]) {
         self.pattern = [coder decodeObjectForKey:@"pattern"];
@@ -90,7 +90,7 @@
     [coder encodeObject:self.format forKey:@"format"];
     [coder encodeObject:self.leadingDigitsPatterns forKey:@"leadingDigitsPatterns"];
     [coder encodeObject:self.nationalPrefixFormattingRule forKey:@"nationalPrefixFormattingRule"];
-    [coder encodeObject:[NSNumber numberWithBool:self.nationalPrefixOptionalWhenFormatting] forKey:@"nationalPrefixOptionalWhenFormatting"];
+    [coder encodeObject:@(self.nationalPrefixOptionalWhenFormatting) forKey:@"nationalPrefixOptionalWhenFormatting"];
     [coder encodeObject:self.domesticCarrierCodeFormattingRule forKey:@"domesticCarrierCodeFormattingRule"];
 }
 

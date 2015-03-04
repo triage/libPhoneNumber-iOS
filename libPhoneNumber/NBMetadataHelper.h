@@ -17,7 +17,7 @@
 + (void)setTestMode:(BOOL)isMode;
 + (BOOL)hasValue:(NSString *)string;
 
-- (NSArray *)getAllMetadata;
+@property (NS_NONATOMIC_IOSONLY, getter=getAllMetadata, readonly, copy) NSArray *allMetadata;
 
 - (NBPhoneMetaData *)getMetadataForNonGeographicalRegion:(NSNumber *)countryCallingCode;
 - (NBPhoneMetaData *)getMetadataForRegion:(NSString *)regionCode;

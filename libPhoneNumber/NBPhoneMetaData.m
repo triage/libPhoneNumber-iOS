@@ -13,7 +13,7 @@
 @implementation NBPhoneMetaData
 
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -36,7 +36,7 @@
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (instancetype)initWithCoder:(NSCoder*)coder
 {
     if (self = [super init]) {
         _generalDesc = [coder decodeObjectForKey:@"generalDesc"];
@@ -94,12 +94,12 @@
     [coder encodeObject:_preferredExtnPrefix forKey:@"preferredExtnPrefix"];
     [coder encodeObject:_nationalPrefixForParsing forKey:@"nationalPrefixForParsing"];
     [coder encodeObject:_nationalPrefixTransformRule forKey:@"nationalPrefixTransformRule"];
-    [coder encodeObject:[NSNumber numberWithBool:_sameMobileAndFixedLinePattern] forKey:@"sameMobileAndFixedLinePattern"];
+    [coder encodeObject:@(_sameMobileAndFixedLinePattern) forKey:@"sameMobileAndFixedLinePattern"];
     [coder encodeObject:_numberFormats forKey:@"numberFormats"];
     [coder encodeObject:_intlNumberFormats forKey:@"intlNumberFormats"];
-    [coder encodeObject:[NSNumber numberWithBool:_mainCountryForCode] forKey:@"mainCountryForCode"];
+    [coder encodeObject:@(_mainCountryForCode) forKey:@"mainCountryForCode"];
     [coder encodeObject:_leadingDigits forKey:@"leadingDigits"];
-    [coder encodeObject:[NSNumber numberWithBool:_leadingZeroPossible] forKey:@"leadingZeroPossible"];
+    [coder encodeObject:@(_leadingZeroPossible) forKey:@"leadingZeroPossible"];
 }
 
 

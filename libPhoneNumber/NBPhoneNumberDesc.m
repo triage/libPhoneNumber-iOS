@@ -10,7 +10,7 @@
 
 @implementation NBPhoneNumberDesc
 
-- (id)initWithData:(id)data
+- (instancetype)initWithData:(id)data
 {
     NSString *nnp = nil;
     NSString *pnp = nil;
@@ -26,7 +26,7 @@
 }
 
 
-- (id)initWithNationalNumberPattern:(NSString *)nnp withPossibleNumberPattern:(NSString *)pnp withExample:(NSString *)exp
+- (instancetype)initWithNationalNumberPattern:(NSString *)nnp withPossibleNumberPattern:(NSString *)pnp withExample:(NSString *)exp
 {
     self = [self init];
     
@@ -41,7 +41,7 @@
 }
 
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -52,7 +52,7 @@
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (instancetype)initWithCoder:(NSCoder*)coder
 {
     if (self = [super init]) {
         self.nationalNumberPattern = [coder decodeObjectForKey:@"nationalNumberPattern"];

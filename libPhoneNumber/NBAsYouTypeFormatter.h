@@ -10,10 +10,10 @@
 
 @interface NBAsYouTypeFormatter : NSObject
 
-- (id)initWithRegionCode:(NSString *)regionCode;
-- (id)initWithRegionCodeForTest:(NSString *)regionCode;
-- (id)initWithRegionCode:(NSString *)regionCode bundle:(NSBundle *)bundle;
-- (id)initWithRegionCodeForTest:(NSString *)regionCode bundle:(NSBundle *)bundle;
+- (instancetype)initWithRegionCode:(NSString *)regionCode;
+- (instancetype)initWithRegionCodeForTest:(NSString *)regionCode;
+- (instancetype)initWithRegionCode:(NSString *)regionCode bundle:(NSBundle *)bundle;
+- (instancetype)initWithRegionCodeForTest:(NSString *)regionCode bundle:(NSBundle *)bundle;
 
 - (NSString *)inputString:(NSString *)string;
 - (NSString *)inputStringAndRememberPosition:(NSString *)string;
@@ -21,10 +21,10 @@
 - (NSString *)inputDigit:(NSString*)nextChar;
 - (NSString *)inputDigitAndRememberPosition:(NSString*)nextChar;
 
-- (NSString *)removeLastDigit;
-- (NSString *)removeLastDigitAndRememberPosition;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *removeLastDigit;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *removeLastDigitAndRememberPosition;
 
-- (NSInteger)getRememberedPosition;
+@property (NS_NONATOMIC_IOSONLY, getter=getRememberedPosition, readonly) NSInteger rememberedPosition;
 
 - (void)clear;
 

@@ -20,6 +20,6 @@
 /* 7 */ @property (nonatomic, strong, readwrite) NSString *preferredDomesticCarrierCode;
 
 - (void)clearCountryCodeSource;
-- (NBECountryCodeSource)getCountryCodeSourceOrDefault;
+@property (NS_NONATOMIC_IOSONLY, getter=getCountryCodeSourceOrDefault, readonly) NBECountryCodeSource countryCodeSourceOrDefault;
 
 @end

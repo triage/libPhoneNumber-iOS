@@ -259,7 +259,7 @@
 		FD8B84201934C33900C350EB /* libPhoneNumber-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FDBCFA121A87ADAB00297F21 /* Meatadata */,
+				FDBCFA121A87ADAB00297F21 /* Metadata */,
 				FD12C2711A8759AF00B53856 /* Model */,
 				FD8B842E1934C35F00C350EB /* NBPhoneNumberDefines.h */,
 				FD8B84311934C35F00C350EB /* NBPhoneNumberUtil.h */,
@@ -272,7 +272,7 @@
 			name = "libPhoneNumber-iOS";
 			sourceTree = "<group>";
 		};
-		FDBCFA121A87ADAB00297F21 /* Meatadata */ = {
+		FDBCFA121A87ADAB00297F21 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
 				FD12C26C1A87546400B53856 /* NBMetadataCore.h */,
@@ -285,7 +285,7 @@
 				FDBCFA0F1A87ADA300297F21 /* NBMetadataCoreTestMapper.m */,
 				FD379E291A8AE5150015C184 /* NBPhoneNumberMetadata.plist */,
 			);
-			name = Meatadata;
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

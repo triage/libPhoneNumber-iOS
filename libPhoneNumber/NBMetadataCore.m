@@ -5,7 +5,7 @@
 #import "NBNumberFormat.h"
 
 @implementation NBPhoneMetadataIM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -23,7 +23,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"IM";
-        self.countryCode = [NSNumber numberWithInteger:44];
+        self.countryCode = @44;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -46,7 +46,7 @@
 @end
 
 @implementation NBPhoneMetadataHR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -64,7 +64,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"HR";
-        self.countryCode = [NSNumber numberWithInteger:385];
+        self.countryCode = @385;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -142,7 +142,7 @@
 @end
 
 @implementation NBPhoneMetadataGW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -160,7 +160,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GW";
-        self.countryCode = [NSNumber numberWithInteger:245];
+        self.countryCode = @245;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -187,7 +187,7 @@
 @end
 
 @implementation NBPhoneMetadataIN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -205,7 +205,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"1(?:600\\d{6}|8(?:0(?:0\\d{4,8}|3\\d{9})|6(?:0\\d{7}|[12]\\d{9})))" withPossibleNumberPattern:@"\\d{8,13}" withExample:@"1800123456"];
         self.codeID = @"IN";
-        self.countryCode = [NSNumber numberWithInteger:91];
+        self.countryCode = @91;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -289,7 +289,7 @@
 @end
 
 @implementation NBPhoneMetadataKE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -307,7 +307,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KE";
-        self.countryCode = [NSNumber numberWithInteger:254];
+        self.countryCode = @254;
         self.internationalPrefix = @"000";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -345,7 +345,7 @@
 @end
 
 @implementation NBPhoneMetadataLA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -363,7 +363,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LA";
-        self.countryCode = [NSNumber numberWithInteger:856];
+        self.countryCode = @856;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -401,7 +401,7 @@
 @end
 
 @implementation NBPhoneMetadataIO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -419,7 +419,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"IO";
-        self.countryCode = [NSNumber numberWithInteger:246];
+        self.countryCode = @246;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -446,7 +446,7 @@
 @end
 
 @implementation NBPhoneMetadataHT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -464,7 +464,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"HT";
-        self.countryCode = [NSNumber numberWithInteger:509];
+        self.countryCode = @509;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -491,7 +491,7 @@
 @end
 
 @implementation NBPhoneMetadataGY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -509,7 +509,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GY";
-        self.countryCode = [NSNumber numberWithInteger:592];
+        self.countryCode = @592;
         self.internationalPrefix = @"001";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -536,7 +536,7 @@
 @end
 
 @implementation NBPhoneMetadataLB
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -554,7 +554,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LB";
-        self.countryCode = [NSNumber numberWithInteger:961];
+        self.countryCode = @961;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -587,7 +587,7 @@
 @end
 
 @implementation NBPhoneMetadataKG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -605,7 +605,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KG";
-        self.countryCode = [NSNumber numberWithInteger:996];
+        self.countryCode = @996;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -643,7 +643,7 @@
 @end
 
 @implementation NBPhoneMetadataHU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -661,7 +661,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[48]0\\d{6}" withPossibleNumberPattern:@"\\d{8}" withExample:@"80123456"];
         self.codeID = @"HU";
-        self.countryCode = [NSNumber numberWithInteger:36];
+        self.countryCode = @36;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"06";
@@ -694,7 +694,7 @@
 @end
 
 @implementation NBPhoneMetadataLC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -712,7 +712,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LC";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -735,7 +735,7 @@
 @end
 
 @implementation NBPhoneMetadataIQ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -753,7 +753,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"IQ";
-        self.countryCode = [NSNumber numberWithInteger:964];
+        self.countryCode = @964;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -791,7 +791,7 @@
 @end
 
 @implementation NBPhoneMetadataKH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -809,7 +809,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KH";
-        self.countryCode = [NSNumber numberWithInteger:855];
+        self.countryCode = @855;
         self.internationalPrefix = @"00[14-9]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -842,7 +842,7 @@
 @end
 
 @implementation NBPhoneMetadataJM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -860,7 +860,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"JM";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -883,7 +883,7 @@
 @end
 
 @implementation NBPhoneMetadataIR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -901,7 +901,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"IR";
-        self.countryCode = [NSNumber numberWithInteger:98];
+        self.countryCode = @98;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -949,7 +949,7 @@
 @end
 
 @implementation NBPhoneMetadataKI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -967,7 +967,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KI";
-        self.countryCode = [NSNumber numberWithInteger:686];
+        self.countryCode = @686;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -990,7 +990,7 @@
 @end
 
 @implementation NBPhoneMetadataIS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1008,7 +1008,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"(?:6(?:2[0-8]|49|8\\d)|87[0189]|95[48])\\d{4}" withPossibleNumberPattern:@"\\d{7}" withExample:@"6201234"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"IS";
-        self.countryCode = [NSNumber numberWithInteger:354];
+        self.countryCode = @354;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -1041,7 +1041,7 @@
 @end
 
 @implementation NBPhoneMetadataMA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1059,7 +1059,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MA";
-        self.countryCode = [NSNumber numberWithInteger:212];
+        self.countryCode = @212;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1104,7 +1104,7 @@
 @end
 
 @implementation NBPhoneMetadataJO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1122,7 +1122,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"JO";
-        self.countryCode = [NSNumber numberWithInteger:962];
+        self.countryCode = @962;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1160,7 +1160,7 @@
 @end
 
 @implementation NBPhoneMetadataIT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1178,7 +1178,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"848\\d{6}" withPossibleNumberPattern:@"\\d{9}" withExample:@"848123456"];
         self.codeID = @"IT";
-        self.countryCode = [NSNumber numberWithInteger:39];
+        self.countryCode = @39;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -1254,7 +1254,7 @@
 @end
 
 @implementation NBPhoneMetadataJP
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1272,7 +1272,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"00(?:37\\d{6,13}|66\\d{6,13}|777(?:[01]\\d{2}|5\\d{3}|8\\d{4})|882[1245]\\d{4})" withPossibleNumberPattern:@"\\d{8,17}" withExample:@"00777012"];
         self.codeID = @"JP";
-        self.countryCode = [NSNumber numberWithInteger:81];
+        self.countryCode = @81;
         self.internationalPrefix = @"010";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1434,7 +1434,7 @@
 @end
 
 @implementation NBPhoneMetadataMC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1452,7 +1452,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"8\\d{7}" withPossibleNumberPattern:@"\\d{8}" withExample:nil];
         self.codeID = @"MC";
-        self.countryCode = [NSNumber numberWithInteger:377];
+        self.countryCode = @377;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1495,7 +1495,7 @@
 @end
 
 @implementation NBPhoneMetadataKM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1513,7 +1513,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KM";
-        self.countryCode = [NSNumber numberWithInteger:269];
+        self.countryCode = @269;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -1540,7 +1540,7 @@
 @end
 
 @implementation NBPhoneMetadataMD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1558,7 +1558,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MD";
-        self.countryCode = [NSNumber numberWithInteger:373];
+        self.countryCode = @373;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1596,7 +1596,7 @@
 @end
 
 @implementation NBPhoneMetadataLI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1614,7 +1614,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"697(?:[35]6|4[25]|[7-9]\\d)\\d{4}" withPossibleNumberPattern:@"\\d{9}" withExample:@"697361234"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LI";
-        self.countryCode = [NSNumber numberWithInteger:423];
+        self.countryCode = @423;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1667,7 +1667,7 @@
 @end
 
 @implementation NBPhoneMetadata881
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1685,7 +1685,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:881];
+        self.countryCode = @881;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -1713,7 +1713,7 @@
 @end
 
 @implementation NBPhoneMetadataKN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1731,7 +1731,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KN";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -1754,7 +1754,7 @@
 @end
 
 @implementation NBPhoneMetadataME
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1772,7 +1772,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ME";
-        self.countryCode = [NSNumber numberWithInteger:382];
+        self.countryCode = @382;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1807,7 +1807,7 @@
 @end
 
 @implementation NBPhoneMetadataNA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1825,7 +1825,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NA";
-        self.countryCode = [NSNumber numberWithInteger:264];
+        self.countryCode = @264;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1868,7 +1868,7 @@
 @end
 
 @implementation NBPhoneMetadataMF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1886,7 +1886,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MF";
-        self.countryCode = [NSNumber numberWithInteger:590];
+        self.countryCode = @590;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1909,7 +1909,7 @@
 @end
 
 @implementation NBPhoneMetadataLK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1927,7 +1927,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LK";
-        self.countryCode = [NSNumber numberWithInteger:94];
+        self.countryCode = @94;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -1960,7 +1960,7 @@
 @end
 
 @implementation NBPhoneMetadata882
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -1978,7 +1978,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"348[57]\\d{7}" withPossibleNumberPattern:@"\\d{11}" withExample:@"3451234567"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:882];
+        self.countryCode = @882;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2036,7 +2036,7 @@
 @end
 
 @implementation NBPhoneMetadataKP
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2054,7 +2054,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"2(?:[0-24-9]\\d{2}|3(?:[0-79]\\d|8[02-9]))\\d{4}" withPossibleNumberPattern:@"\\d{8}" withExample:@"23821234"];
         self.codeID = @"KP";
-        self.countryCode = [NSNumber numberWithInteger:850];
+        self.countryCode = @850;
         self.internationalPrefix = @"00|99";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2092,7 +2092,7 @@
 @end
 
 @implementation NBPhoneMetadataMG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2110,7 +2110,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MG";
-        self.countryCode = [NSNumber numberWithInteger:261];
+        self.countryCode = @261;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2137,7 +2137,7 @@
 @end
 
 @implementation NBPhoneMetadataNC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2155,7 +2155,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NC";
-        self.countryCode = [NSNumber numberWithInteger:687];
+        self.countryCode = @687;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2183,7 +2183,7 @@
 @end
 
 @implementation NBPhoneMetadataMH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2201,7 +2201,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MH";
-        self.countryCode = [NSNumber numberWithInteger:692];
+        self.countryCode = @692;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -2228,7 +2228,7 @@
 @end
 
 @implementation NBPhoneMetadata883
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2246,7 +2246,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:883];
+        self.countryCode = @883;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2284,7 +2284,7 @@
 @end
 
 @implementation NBPhoneMetadataKR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2302,7 +2302,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KR";
-        self.countryCode = [NSNumber numberWithInteger:82];
+        self.countryCode = @82;
         self.internationalPrefix = @"00(?:[124-68]|[37]\\d{2})";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2381,7 +2381,7 @@
 @end
 
 @implementation NBPhoneMetadataNE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2399,7 +2399,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NE";
-        self.countryCode = [NSNumber numberWithInteger:227];
+        self.countryCode = @227;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2432,7 +2432,7 @@
 @end
 
 @implementation NBPhoneMetadataNF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2450,7 +2450,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NF";
-        self.countryCode = [NSNumber numberWithInteger:672];
+        self.countryCode = @672;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2483,7 +2483,7 @@
 @end
 
 @implementation NBPhoneMetadataMK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2501,7 +2501,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MK";
-        self.countryCode = [NSNumber numberWithInteger:389];
+        self.countryCode = @389;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2539,7 +2539,7 @@
 @end
 
 @implementation NBPhoneMetadataNG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2557,7 +2557,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NG";
-        self.countryCode = [NSNumber numberWithInteger:234];
+        self.countryCode = @234;
         self.internationalPrefix = @"009";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2610,7 +2610,7 @@
 @end
 
 @implementation NBPhoneMetadataML
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2628,7 +2628,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ML";
-        self.countryCode = [NSNumber numberWithInteger:223];
+        self.countryCode = @223;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2666,7 +2666,7 @@
 @end
 
 @implementation NBPhoneMetadataMM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2684,7 +2684,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MM";
-        self.countryCode = [NSNumber numberWithInteger:95];
+        self.countryCode = @95;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2747,7 +2747,7 @@
 @end
 
 @implementation NBPhoneMetadataLR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2765,7 +2765,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LR";
-        self.countryCode = [NSNumber numberWithInteger:231];
+        self.countryCode = @231;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2808,7 +2808,7 @@
 @end
 
 @implementation NBPhoneMetadataNI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2826,7 +2826,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NI";
-        self.countryCode = [NSNumber numberWithInteger:505];
+        self.countryCode = @505;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2853,7 +2853,7 @@
 @end
 
 @implementation NBPhoneMetadataKW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2871,7 +2871,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KW";
-        self.countryCode = [NSNumber numberWithInteger:965];
+        self.countryCode = @965;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -2904,7 +2904,7 @@
 @end
 
 @implementation NBPhoneMetadataMN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2922,7 +2922,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MN";
-        self.countryCode = [NSNumber numberWithInteger:976];
+        self.countryCode = @976;
         self.internationalPrefix = @"001";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -2972,7 +2972,7 @@
 @end
 
 @implementation NBPhoneMetadataLS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -2990,7 +2990,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LS";
-        self.countryCode = [NSNumber numberWithInteger:266];
+        self.countryCode = @266;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3017,7 +3017,7 @@
 @end
 
 @implementation NBPhoneMetadataPA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3035,7 +3035,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PA";
-        self.countryCode = [NSNumber numberWithInteger:507];
+        self.countryCode = @507;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3068,7 +3068,7 @@
 @end
 
 @implementation NBPhoneMetadataMO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3086,7 +3086,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MO";
-        self.countryCode = [NSNumber numberWithInteger:853];
+        self.countryCode = @853;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3113,7 +3113,7 @@
 @end
 
 @implementation NBPhoneMetadataLT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3131,7 +3131,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LT";
-        self.countryCode = [NSNumber numberWithInteger:370];
+        self.countryCode = @370;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"8";
@@ -3174,7 +3174,7 @@
 @end
 
 @implementation NBPhoneMetadataKY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3192,7 +3192,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"KY";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -3215,7 +3215,7 @@
 @end
 
 @implementation NBPhoneMetadataMP
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3233,7 +3233,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MP";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -3256,7 +3256,7 @@
 @end
 
 @implementation NBPhoneMetadataLU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3274,7 +3274,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LU";
-        self.countryCode = [NSNumber numberWithInteger:352];
+        self.countryCode = @352;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3342,7 +3342,7 @@
 @end
 
 @implementation NBPhoneMetadataNL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3360,7 +3360,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"14\\d{3,4}" withPossibleNumberPattern:@"\\d{5,6}" withExample:nil];
         self.codeID = @"NL";
-        self.countryCode = [NSNumber numberWithInteger:31];
+        self.countryCode = @31;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -3413,7 +3413,7 @@
 @end
 
 @implementation NBPhoneMetadataKZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3431,7 +3431,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"751\\d{7}" withPossibleNumberPattern:@"\\d{10}" withExample:@"7511234567"];
         self.codeID = @"KZ";
-        self.countryCode = [NSNumber numberWithInteger:7];
+        self.countryCode = @7;
         self.internationalPrefix = @"810";
         self.preferredInternationalPrefix = @"8~10";
         self.nationalPrefix = @"8";
@@ -3454,7 +3454,7 @@
 @end
 
 @implementation NBPhoneMetadataMQ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3472,7 +3472,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MQ";
-        self.countryCode = [NSNumber numberWithInteger:596];
+        self.countryCode = @596;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -3499,7 +3499,7 @@
 @end
 
 @implementation NBPhoneMetadata888
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3517,7 +3517,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:888];
+        self.countryCode = @888;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3544,7 +3544,7 @@
 @end
 
 @implementation NBPhoneMetadataLV
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3562,7 +3562,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LV";
-        self.countryCode = [NSNumber numberWithInteger:371];
+        self.countryCode = @371;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3589,7 +3589,7 @@
 @end
 
 @implementation NBPhoneMetadataMR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3607,7 +3607,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MR";
-        self.countryCode = [NSNumber numberWithInteger:222];
+        self.countryCode = @222;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3634,7 +3634,7 @@
 @end
 
 @implementation NBPhoneMetadataPE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3652,7 +3652,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PE";
-        self.countryCode = [NSNumber numberWithInteger:51];
+        self.countryCode = @51;
         self.internationalPrefix = @"19(?:1[124]|77|90)00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -3695,7 +3695,7 @@
 @end
 
 @implementation NBPhoneMetadataMS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3713,7 +3713,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MS";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -3736,7 +3736,7 @@
 @end
 
 @implementation NBPhoneMetadataQA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3754,7 +3754,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"QA";
-        self.countryCode = [NSNumber numberWithInteger:974];
+        self.countryCode = @974;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3787,7 +3787,7 @@
 @end
 
 @implementation NBPhoneMetadataNO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3805,7 +3805,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"81[23]\\d{5}" withPossibleNumberPattern:@"\\d{8}" withExample:@"81212345"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NO";
-        self.countryCode = [NSNumber numberWithInteger:47];
+        self.countryCode = @47;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3838,7 +3838,7 @@
 @end
 
 @implementation NBPhoneMetadataPF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3856,7 +3856,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"44\\d{4}" withPossibleNumberPattern:@"\\d{6}" withExample:@"441234"];
         self.codeID = @"PF";
-        self.countryCode = [NSNumber numberWithInteger:689];
+        self.countryCode = @689;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3889,7 +3889,7 @@
 @end
 
 @implementation NBPhoneMetadataMT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3907,7 +3907,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MT";
-        self.countryCode = [NSNumber numberWithInteger:356];
+        self.countryCode = @356;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -3934,7 +3934,7 @@
 @end
 
 @implementation NBPhoneMetadataLY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3952,7 +3952,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"LY";
-        self.countryCode = [NSNumber numberWithInteger:218];
+        self.countryCode = @218;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -3979,7 +3979,7 @@
 @end
 
 @implementation NBPhoneMetadataNP
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -3997,7 +3997,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NP";
-        self.countryCode = [NSNumber numberWithInteger:977];
+        self.countryCode = @977;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4035,7 +4035,7 @@
 @end
 
 @implementation NBPhoneMetadataPG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4053,7 +4053,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PG";
-        self.countryCode = [NSNumber numberWithInteger:675];
+        self.countryCode = @675;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -4086,7 +4086,7 @@
 @end
 
 @implementation NBPhoneMetadataMU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4104,7 +4104,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MU";
-        self.countryCode = [NSNumber numberWithInteger:230];
+        self.countryCode = @230;
         self.internationalPrefix = @"0(?:0|[2-7]0|33)";
         self.preferredInternationalPrefix = @"020";
         self.nationalPrefix = nil;
@@ -4137,7 +4137,7 @@
 @end
 
 @implementation NBPhoneMetadataPH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4155,7 +4155,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PH";
-        self.countryCode = [NSNumber numberWithInteger:63];
+        self.countryCode = @63;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4220,7 +4220,7 @@
 @end
 
 @implementation NBPhoneMetadataMV
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4238,7 +4238,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MV";
-        self.countryCode = [NSNumber numberWithInteger:960];
+        self.countryCode = @960;
         self.internationalPrefix = @"0(?:0|19)";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = nil;
@@ -4271,7 +4271,7 @@
 @end
 
 @implementation NBPhoneMetadataOM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4289,7 +4289,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"OM";
-        self.countryCode = [NSNumber numberWithInteger:968];
+        self.countryCode = @968;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -4327,7 +4327,7 @@
 @end
 
 @implementation NBPhoneMetadataNR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4345,7 +4345,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NR";
-        self.countryCode = [NSNumber numberWithInteger:674];
+        self.countryCode = @674;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -4372,7 +4372,7 @@
 @end
 
 @implementation NBPhoneMetadataMW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4390,7 +4390,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MW";
-        self.countryCode = [NSNumber numberWithInteger:265];
+        self.countryCode = @265;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4428,7 +4428,7 @@
 @end
 
 @implementation NBPhoneMetadataMX
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4446,7 +4446,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MX";
-        self.countryCode = [NSNumber numberWithInteger:52];
+        self.countryCode = @52;
         self.internationalPrefix = @"0[09]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"01";
@@ -4509,7 +4509,7 @@
 @end
 
 @implementation NBPhoneMetadataPK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4527,7 +4527,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PK";
-        self.countryCode = [NSNumber numberWithInteger:92];
+        self.countryCode = @92;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4596,7 +4596,7 @@
 @end
 
 @implementation NBPhoneMetadataMY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4614,7 +4614,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MY";
-        self.countryCode = [NSNumber numberWithInteger:60];
+        self.countryCode = @60;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4667,7 +4667,7 @@
 @end
 
 @implementation NBPhoneMetadataNU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4685,7 +4685,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NU";
-        self.countryCode = [NSNumber numberWithInteger:683];
+        self.countryCode = @683;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -4708,7 +4708,7 @@
 @end
 
 @implementation NBPhoneMetadataPL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4726,7 +4726,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PL";
-        self.countryCode = [NSNumber numberWithInteger:48];
+        self.countryCode = @48;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -4774,7 +4774,7 @@
 @end
 
 @implementation NBPhoneMetadataMZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4792,7 +4792,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"MZ";
-        self.countryCode = [NSNumber numberWithInteger:258];
+        self.countryCode = @258;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -4825,7 +4825,7 @@
 @end
 
 @implementation NBPhoneMetadataPM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4843,7 +4843,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PM";
-        self.countryCode = [NSNumber numberWithInteger:508];
+        self.countryCode = @508;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4870,7 +4870,7 @@
 @end
 
 @implementation NBPhoneMetadataRE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4888,7 +4888,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"RE";
-        self.countryCode = [NSNumber numberWithInteger:262];
+        self.countryCode = @262;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4915,7 +4915,7 @@
 @end
 
 @implementation NBPhoneMetadataSA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -4933,7 +4933,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SA";
-        self.countryCode = [NSNumber numberWithInteger:966];
+        self.countryCode = @966;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -4986,7 +4986,7 @@
 @end
 
 @implementation NBPhoneMetadataSB
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5004,7 +5004,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SB";
-        self.countryCode = [NSNumber numberWithInteger:677];
+        self.countryCode = @677;
         self.internationalPrefix = @"0[01]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5032,7 +5032,7 @@
 @end
 
 @implementation NBPhoneMetadataNZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5050,7 +5050,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"NZ";
-        self.countryCode = [NSNumber numberWithInteger:64];
+        self.countryCode = @64;
         self.internationalPrefix = @"0(?:0|161)";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = @"0";
@@ -5105,7 +5105,7 @@
 @end
 
 @implementation NBPhoneMetadataSC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5123,7 +5123,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SC";
-        self.countryCode = [NSNumber numberWithInteger:248];
+        self.countryCode = @248;
         self.internationalPrefix = @"0[0-2]";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = nil;
@@ -5156,7 +5156,7 @@
 @end
 
 @implementation NBPhoneMetadataSD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5174,7 +5174,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SD";
-        self.countryCode = [NSNumber numberWithInteger:249];
+        self.countryCode = @249;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -5201,7 +5201,7 @@
 @end
 
 @implementation NBPhoneMetadataPR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5219,7 +5219,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PR";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -5242,7 +5242,7 @@
 @end
 
 @implementation NBPhoneMetadataSE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5260,7 +5260,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SE";
-        self.countryCode = [NSNumber numberWithInteger:46];
+        self.countryCode = @46;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -5383,7 +5383,7 @@
 @end
 
 @implementation NBPhoneMetadataPS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5401,7 +5401,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PS";
-        self.countryCode = [NSNumber numberWithInteger:970];
+        self.countryCode = @970;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -5439,7 +5439,7 @@
 @end
 
 @implementation NBPhoneMetadataTA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5457,7 +5457,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TA";
-        self.countryCode = [NSNumber numberWithInteger:290];
+        self.countryCode = @290;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5480,7 +5480,7 @@
 @end
 
 @implementation NBPhoneMetadataPT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5498,7 +5498,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PT";
-        self.countryCode = [NSNumber numberWithInteger:351];
+        self.countryCode = @351;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5531,7 +5531,7 @@
 @end
 
 @implementation NBPhoneMetadataSG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5549,7 +5549,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SG";
-        self.countryCode = [NSNumber numberWithInteger:65];
+        self.countryCode = @65;
         self.internationalPrefix = @"0[0-3]\\d";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5592,7 +5592,7 @@
 @end
 
 @implementation NBPhoneMetadataTC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5610,7 +5610,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TC";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -5633,7 +5633,7 @@
 @end
 
 @implementation NBPhoneMetadataSH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5651,7 +5651,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SH";
-        self.countryCode = [NSNumber numberWithInteger:290];
+        self.countryCode = @290;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5674,7 +5674,7 @@
 @end
 
 @implementation NBPhoneMetadataTD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5692,7 +5692,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TD";
-        self.countryCode = [NSNumber numberWithInteger:235];
+        self.countryCode = @235;
         self.internationalPrefix = @"00|16";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = nil;
@@ -5719,7 +5719,7 @@
 @end
 
 @implementation NBPhoneMetadataSI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5737,7 +5737,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SI";
-        self.countryCode = [NSNumber numberWithInteger:386];
+        self.countryCode = @386;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -5780,7 +5780,7 @@
 @end
 
 @implementation NBPhoneMetadataPW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5798,7 +5798,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PW";
-        self.countryCode = [NSNumber numberWithInteger:680];
+        self.countryCode = @680;
         self.internationalPrefix = @"01[12]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5825,7 +5825,7 @@
 @end
 
 @implementation NBPhoneMetadataSJ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5843,7 +5843,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"81[23]\\d{5}" withPossibleNumberPattern:@"\\d{8}" withExample:@"81212345"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SJ";
-        self.countryCode = [NSNumber numberWithInteger:47];
+        self.countryCode = @47;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -5866,7 +5866,7 @@
 @end
 
 @implementation NBPhoneMetadataUA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5884,7 +5884,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"UA";
-        self.countryCode = [NSNumber numberWithInteger:380];
+        self.countryCode = @380;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = @"0~0";
         self.nationalPrefix = @"0";
@@ -5925,7 +5925,7 @@
 @end
 
 @implementation NBPhoneMetadataRO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -5943,7 +5943,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"RO";
-        self.countryCode = [NSNumber numberWithInteger:40];
+        self.countryCode = @40;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -5986,7 +5986,7 @@
 @end
 
 @implementation NBPhoneMetadataSK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6004,7 +6004,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"(?:8(?:00|[5-9]\\d)|9(?:00|[78]\\d))\\d{6}" withPossibleNumberPattern:@"\\d{9}" withExample:@"800123456"];
         self.codeID = @"SK";
-        self.countryCode = [NSNumber numberWithInteger:421];
+        self.countryCode = @421;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6042,7 +6042,7 @@
 @end
 
 @implementation NBPhoneMetadataPY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6060,7 +6060,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"PY";
-        self.countryCode = [NSNumber numberWithInteger:595];
+        self.countryCode = @595;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6108,7 +6108,7 @@
 @end
 
 @implementation NBPhoneMetadataTG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6126,7 +6126,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TG";
-        self.countryCode = [NSNumber numberWithInteger:228];
+        self.countryCode = @228;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6153,7 +6153,7 @@
 @end
 
 @implementation NBPhoneMetadataSL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6171,7 +6171,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SL";
-        self.countryCode = [NSNumber numberWithInteger:232];
+        self.countryCode = @232;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6198,7 +6198,7 @@
 @end
 
 @implementation NBPhoneMetadataTH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6216,7 +6216,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"1\\d{3}" withPossibleNumberPattern:@"\\d{4}" withExample:@"1100"];
         self.codeID = @"TH";
-        self.countryCode = [NSNumber numberWithInteger:66];
+        self.countryCode = @66;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6254,7 +6254,7 @@
 @end
 
 @implementation NBPhoneMetadataSM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6272,7 +6272,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SM";
-        self.countryCode = [NSNumber numberWithInteger:378];
+        self.countryCode = @378;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6325,7 +6325,7 @@
 @end
 
 @implementation NBPhoneMetadataSN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6343,7 +6343,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SN";
-        self.countryCode = [NSNumber numberWithInteger:221];
+        self.countryCode = @221;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6376,7 +6376,7 @@
 @end
 
 @implementation NBPhoneMetadataRS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6394,7 +6394,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"RS";
-        self.countryCode = [NSNumber numberWithInteger:381];
+        self.countryCode = @381;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6447,7 +6447,7 @@
 @end
 
 @implementation NBPhoneMetadataTJ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6465,7 +6465,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TJ";
-        self.countryCode = [NSNumber numberWithInteger:992];
+        self.countryCode = @992;
         self.internationalPrefix = @"810";
         self.preferredInternationalPrefix = @"8~10";
         self.nationalPrefix = @"8";
@@ -6512,7 +6512,7 @@
 @end
 
 @implementation NBPhoneMetadataVA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6530,7 +6530,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"VA";
-        self.countryCode = [NSNumber numberWithInteger:379];
+        self.countryCode = @379;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6557,7 +6557,7 @@
 @end
 
 @implementation NBPhoneMetadataSO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6575,7 +6575,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SO";
-        self.countryCode = [NSNumber numberWithInteger:252];
+        self.countryCode = @252;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6623,7 +6623,7 @@
 @end
 
 @implementation NBPhoneMetadataTK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6641,7 +6641,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TK";
-        self.countryCode = [NSNumber numberWithInteger:690];
+        self.countryCode = @690;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6664,7 +6664,7 @@
 @end
 
 @implementation NBPhoneMetadataUG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6682,7 +6682,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"UG";
-        self.countryCode = [NSNumber numberWithInteger:256];
+        self.countryCode = @256;
         self.internationalPrefix = @"00[057]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -6720,7 +6720,7 @@
 @end
 
 @implementation NBPhoneMetadataRU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6738,7 +6738,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"RU";
-        self.countryCode = [NSNumber numberWithInteger:7];
+        self.countryCode = @7;
         self.internationalPrefix = @"810";
         self.preferredInternationalPrefix = @"8~10";
         self.nationalPrefix = @"8";
@@ -6786,7 +6786,7 @@
 @end
 
 @implementation NBPhoneMetadataTL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6804,7 +6804,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TL";
-        self.countryCode = [NSNumber numberWithInteger:670];
+        self.countryCode = @670;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6837,7 +6837,7 @@
 @end
 
 @implementation NBPhoneMetadataVC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6855,7 +6855,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"VC";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -6878,7 +6878,7 @@
 @end
 
 @implementation NBPhoneMetadata870
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6896,7 +6896,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:870];
+        self.countryCode = @870;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -6923,7 +6923,7 @@
 @end
 
 @implementation NBPhoneMetadataTM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6941,7 +6941,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TM";
-        self.countryCode = [NSNumber numberWithInteger:993];
+        self.countryCode = @993;
         self.internationalPrefix = @"810";
         self.preferredInternationalPrefix = @"8~10";
         self.nationalPrefix = @"8";
@@ -6979,7 +6979,7 @@
 @end
 
 @implementation NBPhoneMetadataSR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -6997,7 +6997,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SR";
-        self.countryCode = [NSNumber numberWithInteger:597];
+        self.countryCode = @597;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7035,7 +7035,7 @@
 @end
 
 @implementation NBPhoneMetadataRW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7053,7 +7053,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"RW";
-        self.countryCode = [NSNumber numberWithInteger:250];
+        self.countryCode = @250;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7091,7 +7091,7 @@
 @end
 
 @implementation NBPhoneMetadataTN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7109,7 +7109,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TN";
-        self.countryCode = [NSNumber numberWithInteger:216];
+        self.countryCode = @216;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7136,7 +7136,7 @@
 @end
 
 @implementation NBPhoneMetadataVE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7154,7 +7154,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"VE";
-        self.countryCode = [NSNumber numberWithInteger:58];
+        self.countryCode = @58;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7181,7 +7181,7 @@
 @end
 
 @implementation NBPhoneMetadataSS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7199,7 +7199,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SS";
-        self.countryCode = [NSNumber numberWithInteger:211];
+        self.countryCode = @211;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7226,7 +7226,7 @@
 @end
 
 @implementation NBPhoneMetadataTO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7244,7 +7244,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TO";
-        self.countryCode = [NSNumber numberWithInteger:676];
+        self.countryCode = @676;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7282,7 +7282,7 @@
 @end
 
 @implementation NBPhoneMetadataST
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7300,7 +7300,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ST";
-        self.countryCode = [NSNumber numberWithInteger:239];
+        self.countryCode = @239;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7327,7 +7327,7 @@
 @end
 
 @implementation NBPhoneMetadataVG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7345,7 +7345,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"VG";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -7368,7 +7368,7 @@
 @end
 
 @implementation NBPhoneMetadataSV
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7386,7 +7386,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SV";
-        self.countryCode = [NSNumber numberWithInteger:503];
+        self.countryCode = @503;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7424,7 +7424,7 @@
 @end
 
 @implementation NBPhoneMetadataTR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7442,7 +7442,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"444\\d{4}" withPossibleNumberPattern:@"\\d{7}" withExample:@"4441444"];
         self.codeID = @"TR";
-        self.countryCode = [NSNumber numberWithInteger:90];
+        self.countryCode = @90;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7480,7 +7480,7 @@
 @end
 
 @implementation NBPhoneMetadataVI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7498,7 +7498,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"VI";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -7521,7 +7521,7 @@
 @end
 
 @implementation NBPhoneMetadataSX
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7539,7 +7539,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SX";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -7562,7 +7562,7 @@
 @end
 
 @implementation NBPhoneMetadataWF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7580,7 +7580,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"WF";
-        self.countryCode = [NSNumber numberWithInteger:681];
+        self.countryCode = @681;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7607,7 +7607,7 @@
 @end
 
 @implementation NBPhoneMetadataTT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7625,7 +7625,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TT";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -7648,7 +7648,7 @@
 @end
 
 @implementation NBPhoneMetadataSY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7666,7 +7666,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"SY";
-        self.countryCode = [NSNumber numberWithInteger:963];
+        self.countryCode = @963;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7699,7 +7699,7 @@
 @end
 
 @implementation NBPhoneMetadataSZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7717,7 +7717,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"0800\\d{4}" withPossibleNumberPattern:@"\\d{8}" withExample:@"08001234"];
         self.codeID = @"SZ";
-        self.countryCode = [NSNumber numberWithInteger:268];
+        self.countryCode = @268;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7745,7 +7745,7 @@
 @end
 
 @implementation NBPhoneMetadataTV
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7763,7 +7763,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TV";
-        self.countryCode = [NSNumber numberWithInteger:688];
+        self.countryCode = @688;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -7786,7 +7786,7 @@
 @end
 
 @implementation NBPhoneMetadataTW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7804,7 +7804,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TW";
-        self.countryCode = [NSNumber numberWithInteger:886];
+        self.countryCode = @886;
         self.internationalPrefix = @"0(?:0[25679]|19)";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7842,7 +7842,7 @@
 @end
 
 @implementation NBPhoneMetadataVN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7860,7 +7860,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[17]99\\d{4}|69\\d{5,6}" withPossibleNumberPattern:@"\\d{7,8}" withExample:@"1992000"];
         self.codeID = @"VN";
-        self.countryCode = [NSNumber numberWithInteger:84];
+        self.countryCode = @84;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -7928,7 +7928,7 @@
 @end
 
 @implementation NBPhoneMetadataUS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7946,7 +7946,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"US";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -7981,7 +7981,7 @@
 @end
 
 @implementation NBPhoneMetadataTZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -7999,7 +7999,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"TZ";
-        self.countryCode = [NSNumber numberWithInteger:255];
+        self.countryCode = @255;
         self.internationalPrefix = @"00[056]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8037,7 +8037,7 @@
 @end
 
 @implementation NBPhoneMetadata878
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8055,7 +8055,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:878];
+        self.countryCode = @878;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -8082,7 +8082,7 @@
 @end
 
 @implementation NBPhoneMetadataYE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8100,7 +8100,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"YE";
-        self.countryCode = [NSNumber numberWithInteger:967];
+        self.countryCode = @967;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8133,7 +8133,7 @@
 @end
 
 @implementation NBPhoneMetadataZA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8151,7 +8151,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ZA";
-        self.countryCode = [NSNumber numberWithInteger:27];
+        self.countryCode = @27;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8194,7 +8194,7 @@
 @end
 
 @implementation NBPhoneMetadataUY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8212,7 +8212,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"UY";
-        self.countryCode = [NSNumber numberWithInteger:598];
+        self.countryCode = @598;
         self.internationalPrefix = @"0(?:1[3-9]\\d|0)";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = @"0";
@@ -8250,7 +8250,7 @@
 @end
 
 @implementation NBPhoneMetadataVU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8268,7 +8268,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"VU";
-        self.countryCode = [NSNumber numberWithInteger:678];
+        self.countryCode = @678;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -8296,7 +8296,7 @@
 @end
 
 @implementation NBPhoneMetadataUZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8314,7 +8314,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"UZ";
-        self.countryCode = [NSNumber numberWithInteger:998];
+        self.countryCode = @998;
         self.internationalPrefix = @"810";
         self.preferredInternationalPrefix = @"8~10";
         self.nationalPrefix = @"8";
@@ -8341,7 +8341,7 @@
 @end
 
 @implementation NBPhoneMetadataWS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8359,7 +8359,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"WS";
-        self.countryCode = [NSNumber numberWithInteger:685];
+        self.countryCode = @685;
         self.internationalPrefix = @"0";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -8392,7 +8392,7 @@
 @end
 
 @implementation NBPhoneMetadata979
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8410,7 +8410,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:979];
+        self.countryCode = @979;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -8437,7 +8437,7 @@
 @end
 
 @implementation NBPhoneMetadataZM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8455,7 +8455,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ZM";
-        self.countryCode = [NSNumber numberWithInteger:260];
+        self.countryCode = @260;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8488,7 +8488,7 @@
 @end
 
 @implementation NBPhoneMetadataAC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8506,7 +8506,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AC";
-        self.countryCode = [NSNumber numberWithInteger:247];
+        self.countryCode = @247;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -8529,7 +8529,7 @@
 @end
 
 @implementation NBPhoneMetadataAD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8547,7 +8547,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AD";
-        self.countryCode = [NSNumber numberWithInteger:376];
+        self.countryCode = @376;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -8580,7 +8580,7 @@
 @end
 
 @implementation NBPhoneMetadataYT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8598,7 +8598,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"YT";
-        self.countryCode = [NSNumber numberWithInteger:262];
+        self.countryCode = @262;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8621,7 +8621,7 @@
 @end
 
 @implementation NBPhoneMetadataAE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8639,7 +8639,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AE";
-        self.countryCode = [NSNumber numberWithInteger:971];
+        self.countryCode = @971;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8682,7 +8682,7 @@
 @end
 
 @implementation NBPhoneMetadataBA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8700,7 +8700,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BA";
-        self.countryCode = [NSNumber numberWithInteger:387];
+        self.countryCode = @387;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8738,7 +8738,7 @@
 @end
 
 @implementation NBPhoneMetadataAF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8756,7 +8756,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AF";
-        self.countryCode = [NSNumber numberWithInteger:93];
+        self.countryCode = @93;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -8789,7 +8789,7 @@
 @end
 
 @implementation NBPhoneMetadataBB
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8807,7 +8807,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BB";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -8830,7 +8830,7 @@
 @end
 
 @implementation NBPhoneMetadataAG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8848,7 +8848,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AG";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -8871,7 +8871,7 @@
 @end
 
 @implementation NBPhoneMetadataBD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8889,7 +8889,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BD";
-        self.countryCode = [NSNumber numberWithInteger:880];
+        self.countryCode = @880;
         self.internationalPrefix = @"00[12]?";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = @"0";
@@ -8932,7 +8932,7 @@
 @end
 
 @implementation NBPhoneMetadataAI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8950,7 +8950,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AI";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -8973,7 +8973,7 @@
 @end
 
 @implementation NBPhoneMetadataBE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -8991,7 +8991,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BE";
-        self.countryCode = [NSNumber numberWithInteger:32];
+        self.countryCode = @32;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9034,7 +9034,7 @@
 @end
 
 @implementation NBPhoneMetadataCA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9052,7 +9052,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CA";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -9075,7 +9075,7 @@
 @end
 
 @implementation NBPhoneMetadataBF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9093,7 +9093,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BF";
-        self.countryCode = [NSNumber numberWithInteger:226];
+        self.countryCode = @226;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9120,7 +9120,7 @@
 @end
 
 @implementation NBPhoneMetadataBG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9138,7 +9138,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BG";
-        self.countryCode = [NSNumber numberWithInteger:359];
+        self.countryCode = @359;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9196,7 +9196,7 @@
 @end
 
 @implementation NBPhoneMetadataZW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9214,7 +9214,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ZW";
-        self.countryCode = [NSNumber numberWithInteger:263];
+        self.countryCode = @263;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9289,7 +9289,7 @@
 @end
 
 @implementation NBPhoneMetadataAL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9307,7 +9307,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AL";
-        self.countryCode = [NSNumber numberWithInteger:355];
+        self.countryCode = @355;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9350,7 +9350,7 @@
 @end
 
 @implementation NBPhoneMetadataCC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9368,7 +9368,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CC";
-        self.countryCode = [NSNumber numberWithInteger:61];
+        self.countryCode = @61;
         self.internationalPrefix = @"(?:14(?:1[14]|34|4[17]|[56]6|7[47]|88))?001[14-689]";
         self.preferredInternationalPrefix = @"0011";
         self.nationalPrefix = @"0";
@@ -9391,7 +9391,7 @@
 @end
 
 @implementation NBPhoneMetadataBH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9409,7 +9409,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BH";
-        self.countryCode = [NSNumber numberWithInteger:973];
+        self.countryCode = @973;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9436,7 +9436,7 @@
 @end
 
 @implementation NBPhoneMetadataAM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9454,7 +9454,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AM";
-        self.countryCode = [NSNumber numberWithInteger:374];
+        self.countryCode = @374;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9497,7 +9497,7 @@
 @end
 
 @implementation NBPhoneMetadataCD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9515,7 +9515,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CD";
-        self.countryCode = [NSNumber numberWithInteger:243];
+        self.countryCode = @243;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9558,7 +9558,7 @@
 @end
 
 @implementation NBPhoneMetadataBI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9576,7 +9576,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BI";
-        self.countryCode = [NSNumber numberWithInteger:257];
+        self.countryCode = @257;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9603,7 +9603,7 @@
 @end
 
 @implementation NBPhoneMetadataBJ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9621,7 +9621,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BJ";
-        self.countryCode = [NSNumber numberWithInteger:229];
+        self.countryCode = @229;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9648,7 +9648,7 @@
 @end
 
 @implementation NBPhoneMetadataAO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9666,7 +9666,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AO";
-        self.countryCode = [NSNumber numberWithInteger:244];
+        self.countryCode = @244;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9693,7 +9693,7 @@
 @end
 
 @implementation NBPhoneMetadataCF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9711,7 +9711,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CF";
-        self.countryCode = [NSNumber numberWithInteger:236];
+        self.countryCode = @236;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9738,7 +9738,7 @@
 @end
 
 @implementation NBPhoneMetadataCG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9756,7 +9756,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CG";
-        self.countryCode = [NSNumber numberWithInteger:242];
+        self.countryCode = @242;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9789,7 +9789,7 @@
 @end
 
 @implementation NBPhoneMetadataBL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9807,7 +9807,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BL";
-        self.countryCode = [NSNumber numberWithInteger:590];
+        self.countryCode = @590;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9830,7 +9830,7 @@
 @end
 
 @implementation NBPhoneMetadata800
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9848,7 +9848,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:800];
+        self.countryCode = @800;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -9875,7 +9875,7 @@
 @end
 
 @implementation NBPhoneMetadataCH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9893,7 +9893,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"860\\d{9}" withPossibleNumberPattern:@"\\d{12}" withExample:@"860123456789"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CH";
-        self.countryCode = [NSNumber numberWithInteger:41];
+        self.countryCode = @41;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -9931,7 +9931,7 @@
 @end
 
 @implementation NBPhoneMetadataBM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9949,7 +9949,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BM";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -9972,7 +9972,7 @@
 @end
 
 @implementation NBPhoneMetadataAR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -9990,7 +9990,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"810\\d{7}" withPossibleNumberPattern:@"\\d{10}" withExample:@"8101234567"];
         self.codeID = @"AR";
-        self.countryCode = [NSNumber numberWithInteger:54];
+        self.countryCode = @54;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -10109,7 +10109,7 @@
 @end
 
 @implementation NBPhoneMetadataCI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10127,7 +10127,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CI";
-        self.countryCode = [NSNumber numberWithInteger:225];
+        self.countryCode = @225;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -10154,7 +10154,7 @@
 @end
 
 @implementation NBPhoneMetadataBN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10172,7 +10172,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BN";
-        self.countryCode = [NSNumber numberWithInteger:673];
+        self.countryCode = @673;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -10199,7 +10199,7 @@
 @end
 
 @implementation NBPhoneMetadataDE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10217,7 +10217,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"17799\\d{7,8}" withPossibleNumberPattern:@"\\d{12,13}" withExample:@"177991234567"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"DE";
-        self.countryCode = [NSNumber numberWithInteger:49];
+        self.countryCode = @49;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -10321,7 +10321,7 @@
 @end
 
 @implementation NBPhoneMetadataAS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10339,7 +10339,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AS";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -10362,7 +10362,7 @@
 @end
 
 @implementation NBPhoneMetadataBO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10380,7 +10380,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BO";
-        self.countryCode = [NSNumber numberWithInteger:591];
+        self.countryCode = @591;
         self.internationalPrefix = @"00(1\\d)?";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -10413,7 +10413,7 @@
 @end
 
 @implementation NBPhoneMetadataAT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10431,7 +10431,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AT";
-        self.countryCode = [NSNumber numberWithInteger:43];
+        self.countryCode = @43;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -10484,7 +10484,7 @@
 @end
 
 @implementation NBPhoneMetadataCK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10502,7 +10502,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CK";
-        self.countryCode = [NSNumber numberWithInteger:682];
+        self.countryCode = @682;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -10529,7 +10529,7 @@
 @end
 
 @implementation NBPhoneMetadataAU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10547,7 +10547,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"1(?:3(?:\\d{4}|00\\d{6})|80(?:0\\d{6}|2\\d{3}))" withPossibleNumberPattern:@"\\d{6,10}" withExample:@"1300123456"];
         self.codeID = @"AU";
-        self.countryCode = [NSNumber numberWithInteger:61];
+        self.countryCode = @61;
         self.internationalPrefix = @"(?:14(?:1[14]|34|4[17]|[56]6|7[47]|88))?001[14-689]";
         self.preferredInternationalPrefix = @"0011";
         self.nationalPrefix = @"0";
@@ -10612,7 +10612,7 @@
 @end
 
 @implementation NBPhoneMetadataCL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10630,7 +10630,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"600\\d{7,8}" withPossibleNumberPattern:@"\\d{10,11}" withExample:@"6001234567"];
         self.codeID = @"CL";
-        self.countryCode = [NSNumber numberWithInteger:56];
+        self.countryCode = @56;
         self.internationalPrefix = @"(?:0|1(?:1[0-69]|2[0-57]|5[13-58]|69|7[0167]|8[018]))0";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -10738,7 +10738,7 @@
 @end
 
 @implementation NBPhoneMetadataEC
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10756,7 +10756,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"EC";
-        self.countryCode = [NSNumber numberWithInteger:593];
+        self.countryCode = @593;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -10809,7 +10809,7 @@
 @end
 
 @implementation NBPhoneMetadataBQ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10827,7 +10827,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BQ";
-        self.countryCode = [NSNumber numberWithInteger:599];
+        self.countryCode = @599;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -10850,7 +10850,7 @@
 @end
 
 @implementation NBPhoneMetadataCM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10868,7 +10868,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CM";
-        self.countryCode = [NSNumber numberWithInteger:237];
+        self.countryCode = @237;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -10906,7 +10906,7 @@
 @end
 
 @implementation NBPhoneMetadataBR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -10924,7 +10924,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[34]00\\d{5}" withPossibleNumberPattern:@"\\d{8}" withExample:@"40041234"];
         self.codeID = @"BR";
-        self.countryCode = [NSNumber numberWithInteger:55];
+        self.countryCode = @55;
         self.internationalPrefix = @"00(?:1[45]|2[135]|31|4[13])";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -11002,7 +11002,7 @@
 @end
 
 @implementation NBPhoneMetadataAW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11020,7 +11020,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AW";
-        self.countryCode = [NSNumber numberWithInteger:297];
+        self.countryCode = @297;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11047,7 +11047,7 @@
 @end
 
 @implementation NBPhoneMetadataCN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11065,7 +11065,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"(?:4|(?:10)?8)00\\d{7}" withPossibleNumberPattern:@"\\d{10,12}" withExample:@"4001234567"];
         self.codeID = @"CN";
-        self.countryCode = [NSNumber numberWithInteger:86];
+        self.countryCode = @86;
         self.internationalPrefix = @"(1[1279]\\d{3})?00";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = @"0";
@@ -11214,7 +11214,7 @@
 @end
 
 @implementation NBPhoneMetadataEE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11232,7 +11232,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"1\\d{3,4}|800[2-9]\\d{3}" withPossibleNumberPattern:@"\\d{4,7}" withExample:@"8002123"];
         self.codeID = @"EE";
-        self.countryCode = [NSNumber numberWithInteger:372];
+        self.countryCode = @372;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11278,7 +11278,7 @@
 @end
 
 @implementation NBPhoneMetadataBS
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11296,7 +11296,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BS";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -11319,7 +11319,7 @@
 @end
 
 @implementation NBPhoneMetadataDJ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11337,7 +11337,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"DJ";
-        self.countryCode = [NSNumber numberWithInteger:253];
+        self.countryCode = @253;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11364,7 +11364,7 @@
 @end
 
 @implementation NBPhoneMetadataAX
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11382,7 +11382,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[13]00\\d{3,7}|2(?:0(?:0\\d{3,7}|2[023]\\d{1,6}|9[89]\\d{1,6}))|60(?:[12]\\d{5,6}|6\\d{7})|7(?:1\\d{7}|3\\d{8}|5[03-9]\\d{2,7})" withPossibleNumberPattern:@"\\d{5,10}" withExample:@"100123"];
         self.codeID = @"AX";
-        self.countryCode = [NSNumber numberWithInteger:358];
+        self.countryCode = @358;
         self.internationalPrefix = @"00|99[049]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -11405,7 +11405,7 @@
 @end
 
 @implementation NBPhoneMetadataCO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11423,7 +11423,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CO";
-        self.countryCode = [NSNumber numberWithInteger:57];
+        self.countryCode = @57;
         self.internationalPrefix = @"00(?:4(?:[14]4|56)|[579])";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -11480,7 +11480,7 @@
 @end
 
 @implementation NBPhoneMetadataBT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11498,7 +11498,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BT";
-        self.countryCode = [NSNumber numberWithInteger:975];
+        self.countryCode = @975;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11531,7 +11531,7 @@
 @end
 
 @implementation NBPhoneMetadataDK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11549,7 +11549,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"DK";
-        self.countryCode = [NSNumber numberWithInteger:45];
+        self.countryCode = @45;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11576,7 +11576,7 @@
 @end
 
 @implementation NBPhoneMetadataEG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11594,7 +11594,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"EG";
-        self.countryCode = [NSNumber numberWithInteger:20];
+        self.countryCode = @20;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -11632,7 +11632,7 @@
 @end
 
 @implementation NBPhoneMetadataAZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11650,7 +11650,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"AZ";
-        self.countryCode = [NSNumber numberWithInteger:994];
+        self.countryCode = @994;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -11688,7 +11688,7 @@
 @end
 
 @implementation NBPhoneMetadataEH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11706,7 +11706,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"EH";
-        self.countryCode = [NSNumber numberWithInteger:212];
+        self.countryCode = @212;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -11729,7 +11729,7 @@
 @end
 
 @implementation NBPhoneMetadataDM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11747,7 +11747,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"DM";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -11770,7 +11770,7 @@
 @end
 
 @implementation NBPhoneMetadataCR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11788,7 +11788,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CR";
-        self.countryCode = [NSNumber numberWithInteger:506];
+        self.countryCode = @506;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11821,7 +11821,7 @@
 @end
 
 @implementation NBPhoneMetadataBW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11839,7 +11839,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BW";
-        self.countryCode = [NSNumber numberWithInteger:267];
+        self.countryCode = @267;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11877,7 +11877,7 @@
 @end
 
 @implementation NBPhoneMetadataGA
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11895,7 +11895,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GA";
-        self.countryCode = [NSNumber numberWithInteger:241];
+        self.countryCode = @241;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -11928,7 +11928,7 @@
 @end
 
 @implementation NBPhoneMetadataDO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11946,7 +11946,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"DO";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -11969,7 +11969,7 @@
 @end
 
 @implementation NBPhoneMetadataBY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -11987,7 +11987,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"8(?:[013]|[12]0)\\d{8}|902\\d{7}" withPossibleNumberPattern:@"\\d{10,11}" withExample:@"82012345678"];
         self.codeID = @"BY";
-        self.countryCode = [NSNumber numberWithInteger:375];
+        self.countryCode = @375;
         self.internationalPrefix = @"810";
         self.preferredInternationalPrefix = @"8~10";
         self.nationalPrefix = @"8";
@@ -12038,7 +12038,7 @@
 @end
 
 @implementation NBPhoneMetadataGB
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12056,7 +12056,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GB";
-        self.countryCode = [NSNumber numberWithInteger:44];
+        self.countryCode = @44;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12140,7 +12140,7 @@
 @end
 
 @implementation NBPhoneMetadataCU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12158,7 +12158,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CU";
-        self.countryCode = [NSNumber numberWithInteger:53];
+        self.countryCode = @53;
         self.internationalPrefix = @"119";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12196,7 +12196,7 @@
 @end
 
 @implementation NBPhoneMetadataBZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12214,7 +12214,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"BZ";
-        self.countryCode = [NSNumber numberWithInteger:501];
+        self.countryCode = @501;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12247,7 +12247,7 @@
 @end
 
 @implementation NBPhoneMetadataCV
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12265,7 +12265,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CV";
-        self.countryCode = [NSNumber numberWithInteger:238];
+        self.countryCode = @238;
         self.internationalPrefix = @"0";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12292,7 +12292,7 @@
 @end
 
 @implementation NBPhoneMetadata808
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12310,7 +12310,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"001";
-        self.countryCode = [NSNumber numberWithInteger:808];
+        self.countryCode = @808;
         self.internationalPrefix = @"";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12337,7 +12337,7 @@
 @end
 
 @implementation NBPhoneMetadataGD
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12355,7 +12355,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GD";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -12378,7 +12378,7 @@
 @end
 
 @implementation NBPhoneMetadataFI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12396,7 +12396,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"[13]00\\d{3,7}|2(?:0(?:0\\d{3,7}|2[023]\\d{1,6}|9[89]\\d{1,6}))|60(?:[12]\\d{5,6}|6\\d{7})|7(?:1\\d{7}|3\\d{8}|5[03-9]\\d{2,7})" withPossibleNumberPattern:@"\\d{5,10}" withExample:@"100123"];
         self.codeID = @"FI";
-        self.countryCode = [NSNumber numberWithInteger:358];
+        self.countryCode = @358;
         self.internationalPrefix = @"00|99[049]";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12434,7 +12434,7 @@
 @end
 
 @implementation NBPhoneMetadataCW
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12452,7 +12452,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CW";
-        self.countryCode = [NSNumber numberWithInteger:599];
+        self.countryCode = @599;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12485,7 +12485,7 @@
 @end
 
 @implementation NBPhoneMetadataGE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12503,7 +12503,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"706\\d{6}" withPossibleNumberPattern:@"\\d{9}" withExample:@"706123456"];
         self.codeID = @"GE";
-        self.countryCode = [NSNumber numberWithInteger:995];
+        self.countryCode = @995;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12541,7 +12541,7 @@
 @end
 
 @implementation NBPhoneMetadataFJ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12559,7 +12559,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"FJ";
-        self.countryCode = [NSNumber numberWithInteger:679];
+        self.countryCode = @679;
         self.internationalPrefix = @"0(?:0|52)";
         self.preferredInternationalPrefix = @"00";
         self.nationalPrefix = nil;
@@ -12592,7 +12592,7 @@
 @end
 
 @implementation NBPhoneMetadataCX
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12610,7 +12610,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CX";
-        self.countryCode = [NSNumber numberWithInteger:61];
+        self.countryCode = @61;
         self.internationalPrefix = @"(?:14(?:1[14]|34|4[17]|[56]6|7[47]|88))?001[14-689]";
         self.preferredInternationalPrefix = @"0011";
         self.nationalPrefix = @"0";
@@ -12633,7 +12633,7 @@
 @end
 
 @implementation NBPhoneMetadataGF
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12651,7 +12651,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GF";
-        self.countryCode = [NSNumber numberWithInteger:594];
+        self.countryCode = @594;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12678,7 +12678,7 @@
 @end
 
 @implementation NBPhoneMetadataFK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12696,7 +12696,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"FK";
-        self.countryCode = [NSNumber numberWithInteger:500];
+        self.countryCode = @500;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12719,7 +12719,7 @@
 @end
 
 @implementation NBPhoneMetadataCY
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12737,7 +12737,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CY";
-        self.countryCode = [NSNumber numberWithInteger:357];
+        self.countryCode = @357;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12764,7 +12764,7 @@
 @end
 
 @implementation NBPhoneMetadataGG
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12782,7 +12782,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GG";
-        self.countryCode = [NSNumber numberWithInteger:44];
+        self.countryCode = @44;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12805,7 +12805,7 @@
 @end
 
 @implementation NBPhoneMetadataCZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12823,7 +12823,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"9(?:3\\d{9}|6\\d{7,10})" withPossibleNumberPattern:@"\\d{9,12}" withExample:@"93123456789"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"CZ";
-        self.countryCode = [NSNumber numberWithInteger:420];
+        self.countryCode = @420;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12861,7 +12861,7 @@
 @end
 
 @implementation NBPhoneMetadataGH
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12879,7 +12879,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"800\\d{5}" withPossibleNumberPattern:@"\\d{8}" withExample:@"80012345"];
         self.codeID = @"GH";
-        self.countryCode = [NSNumber numberWithInteger:233];
+        self.countryCode = @233;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -12912,7 +12912,7 @@
 @end
 
 @implementation NBPhoneMetadataFM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12930,7 +12930,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"FM";
-        self.countryCode = [NSNumber numberWithInteger:691];
+        self.countryCode = @691;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -12957,7 +12957,7 @@
 @end
 
 @implementation NBPhoneMetadataER
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -12975,7 +12975,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ER";
-        self.countryCode = [NSNumber numberWithInteger:291];
+        self.countryCode = @291;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13002,7 +13002,7 @@
 @end
 
 @implementation NBPhoneMetadataGI
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13020,7 +13020,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GI";
-        self.countryCode = [NSNumber numberWithInteger:350];
+        self.countryCode = @350;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13048,7 +13048,7 @@
 @end
 
 @implementation NBPhoneMetadataES
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13066,7 +13066,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ES";
-        self.countryCode = [NSNumber numberWithInteger:34];
+        self.countryCode = @34;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13094,7 +13094,7 @@
 @end
 
 @implementation NBPhoneMetadataFO
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13112,7 +13112,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"FO";
-        self.countryCode = [NSNumber numberWithInteger:298];
+        self.countryCode = @298;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13139,7 +13139,7 @@
 @end
 
 @implementation NBPhoneMetadataET
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13157,7 +13157,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"ET";
-        self.countryCode = [NSNumber numberWithInteger:251];
+        self.countryCode = @251;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13184,7 +13184,7 @@
 @end
 
 @implementation NBPhoneMetadataGL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13202,7 +13202,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GL";
-        self.countryCode = [NSNumber numberWithInteger:299];
+        self.countryCode = @299;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13229,7 +13229,7 @@
 @end
 
 @implementation NBPhoneMetadataDZ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13247,7 +13247,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"DZ";
-        self.countryCode = [NSNumber numberWithInteger:213];
+        self.countryCode = @213;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13285,7 +13285,7 @@
 @end
 
 @implementation NBPhoneMetadataGM
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13303,7 +13303,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GM";
-        self.countryCode = [NSNumber numberWithInteger:220];
+        self.countryCode = @220;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13330,7 +13330,7 @@
 @end
 
 @implementation NBPhoneMetadataID
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13348,7 +13348,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"8071\\d{6}" withPossibleNumberPattern:@"\\d{10}" withExample:@"8071123456"];
         self.codeID = @"ID";
-        self.countryCode = [NSNumber numberWithInteger:62];
+        self.countryCode = @62;
         self.internationalPrefix = @"0(?:0[1789]|10(?:00|1[67]))";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13401,7 +13401,7 @@
 @end
 
 @implementation NBPhoneMetadataFR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13419,7 +13419,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"FR";
-        self.countryCode = [NSNumber numberWithInteger:33];
+        self.countryCode = @33;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13467,7 +13467,7 @@
 @end
 
 @implementation NBPhoneMetadataGN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13485,7 +13485,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GN";
-        self.countryCode = [NSNumber numberWithInteger:224];
+        self.countryCode = @224;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13518,7 +13518,7 @@
 @end
 
 @implementation NBPhoneMetadataIE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13536,7 +13536,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"8[35-9]\\d{8}" withPossibleNumberPattern:@"\\d{10}" withExample:@"8501234567"];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"18[59]0\\d{6}" withPossibleNumberPattern:@"\\d{10}" withExample:@"1850123456"];
         self.codeID = @"IE";
-        self.countryCode = [NSNumber numberWithInteger:353];
+        self.countryCode = @353;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13605,7 +13605,7 @@
 @end
 
 @implementation NBPhoneMetadataHK
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13623,7 +13623,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"HK";
-        self.countryCode = [NSNumber numberWithInteger:852];
+        self.countryCode = @852;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13666,7 +13666,7 @@
 @end
 
 @implementation NBPhoneMetadataGP
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13684,7 +13684,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GP";
-        self.countryCode = [NSNumber numberWithInteger:590];
+        self.countryCode = @590;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13711,7 +13711,7 @@
 @end
 
 @implementation NBPhoneMetadataGQ
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13729,7 +13729,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GQ";
-        self.countryCode = [NSNumber numberWithInteger:240];
+        self.countryCode = @240;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13762,7 +13762,7 @@
 @end
 
 @implementation NBPhoneMetadataGR
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13780,7 +13780,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GR";
-        self.countryCode = [NSNumber numberWithInteger:30];
+        self.countryCode = @30;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13818,7 +13818,7 @@
 @end
 
 @implementation NBPhoneMetadataHN
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13836,7 +13836,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"HN";
-        self.countryCode = [NSNumber numberWithInteger:504];
+        self.countryCode = @504;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13863,7 +13863,7 @@
 @end
 
 @implementation NBPhoneMetadataJE
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13881,7 +13881,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"JE";
-        self.countryCode = [NSNumber numberWithInteger:44];
+        self.countryCode = @44;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";
@@ -13904,7 +13904,7 @@
 @end
 
 @implementation NBPhoneMetadataGT
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13922,7 +13922,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GT";
-        self.countryCode = [NSNumber numberWithInteger:502];
+        self.countryCode = @502;
         self.internationalPrefix = @"00";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = nil;
@@ -13955,7 +13955,7 @@
 @end
 
 @implementation NBPhoneMetadataGU
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -13973,7 +13973,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.codeID = @"GU";
-        self.countryCode = [NSNumber numberWithInteger:1];
+        self.countryCode = @1;
         self.internationalPrefix = @"011";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"1";
@@ -13996,7 +13996,7 @@
 @end
 
 @implementation NBPhoneMetadataIL
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -14014,7 +14014,7 @@
         self.voicemail = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"NA" withPossibleNumberPattern:@"NA" withExample:nil];
         self.noInternationalDialling = [[NBPhoneNumberDesc alloc] initWithNationalNumberPattern:@"1700\\d{6}|[2-689]\\d{3}" withPossibleNumberPattern:@"\\d{4,10}" withExample:@"1700123456"];
         self.codeID = @"IL";
-        self.countryCode = [NSNumber numberWithInteger:972];
+        self.countryCode = @972;
         self.internationalPrefix = @"0(?:0|1[2-9])";
         self.preferredInternationalPrefix = nil;
         self.nationalPrefix = @"0";

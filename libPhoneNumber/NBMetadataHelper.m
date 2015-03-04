@@ -104,22 +104,22 @@ static BOOL isTestMode = NO;
     NSMutableArray *resultMetadata = [[NSMutableArray alloc] init];
     
     for (NSString *countryCode in countryCodes) {
-        id countryDictionaryInstance = [NSDictionary dictionaryWithObject:countryCode forKey:NSLocaleCountryCode];
+        id countryDictionaryInstance = @{NSLocaleCountryCode: countryCode};
         NSString *identifier = [NSLocale localeIdentifierFromComponents:countryDictionaryInstance];
         NSString *country = [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value:identifier];
         
         NSMutableDictionary *countryMeta = [[NSMutableDictionary alloc] init];
         if (country) {
-            [countryMeta setObject:country forKey:@"name"];
+            countryMeta[@"name"] = country;
         }
         
         if (countryCode) {
-            [countryMeta setObject:countryCode forKey:@"code"];
+            countryMeta[@"code"] = countryCode;
         }
         
         NBPhoneMetaData *metaData = [self getMetadataForRegion:countryCode];
         if (metaData) {
-            [countryMeta setObject:metaData forKey:@"metadata"];
+            countryMeta[@"metadata"] = metaData;
         }
         
         [resultMetadata addObject:countryMeta];
@@ -153,7 +153,7 @@ static BOOL isTestMode = NO;
 {
     [self initializeHelper];
     
-    id res = [kMapCCode2CN objectForKey:regionCode];
+    id res = kMapCCode2CN[regionCode];
     
     if (res) {
         return res;

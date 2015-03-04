@@ -16,7 +16,7 @@
     {
         if(index >= [self count]) return nil;
         
-        id res = [self objectAtIndex:index];
+        id res = self[index];
         
         if (res == nil || (NSNull*)res == [NSNull null])
             return nil;

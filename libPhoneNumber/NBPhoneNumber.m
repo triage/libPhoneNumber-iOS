@@ -10,7 +10,7 @@
 
 @implementation NBPhoneNumber
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -83,7 +83,7 @@
 }
 
 
-- (id)initWithCoder:(NSCoder*)coder
+- (instancetype)initWithCoder:(NSCoder*)coder
 {
     if (self = [super init]) {
         self.countryCode = [coder decodeObjectForKey:@"countryCode"];
@@ -103,7 +103,7 @@
     [coder encodeObject:self.countryCode forKey:@"countryCode"];
     [coder encodeObject:self.nationalNumber forKey:@"nationalNumber"];
     [coder encodeObject:self.extension forKey:@"extension"];
-    [coder encodeObject:[NSNumber numberWithBool:self.italianLeadingZero] forKey:@"italianLeadingZero"];
+    [coder encodeObject:@(self.italianLeadingZero) forKey:@"italianLeadingZero"];
     [coder encodeObject:self.rawInput forKey:@"rawInput"];
     [coder encodeObject:self.countryCodeSource forKey:@"countryCodeSource"];
     [coder encodeObject:self.preferredDomesticCarrierCode forKey:@"preferredDomesticCarrierCode"];

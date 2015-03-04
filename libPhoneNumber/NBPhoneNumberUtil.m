@@ -139,6 +139,15 @@ static NSDictionary *DIGIT_MAPPINGS;
 }
 
 
++ (NBPhoneNumber *) parsePhoneNumber:(NSString *)phoneNumber error:(NSError **)error
+{
+    NBPhoneNumberUtil *util = [[NBPhoneNumberUtil alloc] init];
+    NSString *country = [[util countryCodeByCarrier] uppercaseString];
+    NBPhoneNumber *parsedPhoneNumber = [util parse:phoneNumber defaultRegion:country error:error];
+    return parsedPhoneNumber;
+}
+
+
 - (instancetype)initWithBundle:(NSBundle *)bundle metaData:(NSString *)metaData __attribute__((deprecated))
 {
     self = [self init];
@@ -152,11 +161,13 @@ static NSDictionary *DIGIT_MAPPINGS;
 
 - (NSError*)errorWithObject:(id)obj withDomain:(NSString *)domain
 {
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:obj forKey:NSLocalizedDescriptionKey];
+    NSDictionary *userInfo = @{NSLocalizedDescriptionKey: obj};
     NSError *error = [NSError errorWithDomain:domain code:0 userInfo:userInfo];
     return error;
 }
 
+
+#pragma mark NSRegularExpression
 
 - (NSRegularExpression *)entireRegularExpressionWithPattern:(NSString *)regexPattern
                                                     options:(NSRegularExpressionOptions)options
@@ -169,7 +180,7 @@ static NSDictionary *DIGIT_MAPPINGS;
             entireStringRegexCache = [[NSMutableDictionary alloc] init];
         }
         
-        NSRegularExpression *regex = [entireStringRegexCache objectForKey:regexPattern];
+        NSRegularExpression *regex = entireStringRegexCache[regexPattern];
         if (! regex)
         {
             NSString *finalRegexString = regexPattern;
@@ -178,7 +189,7 @@ static NSDictionary *DIGIT_MAPPINGS;
             }
             
             regex = [self regularExpressionWithPattern:finalRegexString options:0 error:error];
-            [entireStringRegexCache setObject:regex forKey:regexPattern];
+            entireStringRegexCache[regexPattern] = regex;
         }
         
         return regex;
@@ -198,10 +209,10 @@ static NSDictionary *DIGIT_MAPPINGS;
             regexPatternCache = [[NSMutableDictionary alloc] init];
         }
         
-        NSRegularExpression *regex = [regexPatternCache objectForKey:pattern];
+        NSRegularExpression *regex = regexPatternCache[pattern];
         if (!regex) {
             regex = [NSRegularExpression regularExpressionWithPattern:pattern options:options error:error];
-            [regexPatternCache setObject:regex forKey:pattern];
+            regexPatternCache[pattern] = regex;
         }
         return regex;
     }
@@ -233,7 +244,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     int foundPosition = -1;
     
     if (matches.count > 0) {
-        NSTextCheckingResult *match = [matches objectAtIndex:0];
+        NSTextCheckingResult *match = matches[0];
         return (int)match.range.location;
     }
     
@@ -299,13 +310,13 @@ static NSDictionary *DIGIT_MAPPINGS;
 }
 
 
-- (NSTextCheckingResult*)matcheFirstByRegex:(NSString *)sourceString regex:(NSString *)pattern
+- (NSTextCheckingResult*)matchFirstByRegex:(NSString *)sourceString regex:(NSString *)pattern
 {
     NSError *error = nil;
     NSRegularExpression *currentPattern = [self regularExpressionWithPattern:pattern options:0 error:&error];
     NSArray *matches = [currentPattern matchesInString:sourceString options:0 range:NSMakeRange(0, sourceString.length)];
     if ([matches count] > 0)
-        return [matches objectAtIndex:0];
+        return matches[0];
     return nil;
 }
 
@@ -357,7 +368,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     {
         unichar oneChar = [sourceString characterAtIndex:i];
         NSString *keyString = [NSString stringWithCharacters:&oneChar length:1];
-        NSString *mappedValue = [dicMap objectForKey:keyString];
+        NSString *mappedValue = dicMap[keyString];
         if (mappedValue != nil) {
             [targetString appendString:mappedValue];
         } else {
@@ -408,7 +419,7 @@ static NSDictionary *DIGIT_MAPPINGS;
 
 #pragma mark - Initializations -
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)
@@ -473,14 +484,13 @@ static NSDictionary *DIGIT_MAPPINGS;
 - (NSDictionary *)DIGIT_MAPPINGS
 {
     if (!DIGIT_MAPPINGS) {
-        DIGIT_MAPPINGS = [NSDictionary dictionaryWithObjectsAndKeys:
-                          @"0", @"0", @"1", @"1", @"2", @"2", @"3", @"3", @"4", @"4", @"5", @"5", @"6", @"6", @"7", @"7", @"8", @"8", @"9", @"9",
+        DIGIT_MAPPINGS = @{@"0": @"0", @"1": @"1", @"2": @"2", @"3": @"3", @"4": @"4", @"5": @"5", @"6": @"6", @"7": @"7", @"8": @"8", @"9": @"9",
                           // Fullwidth digit 0 to 9
-                          @"0", @"\uFF10", @"1", @"\uFF11", @"2", @"\uFF12", @"3", @"\uFF13", @"4", @"\uFF14", @"5", @"\uFF15", @"6", @"\uFF16", @"7", @"\uFF17", @"8", @"\uFF18", @"9", @"\uFF19",
+                          @"\uFF10": @"0", @"\uFF11": @"1", @"\uFF12": @"2", @"\uFF13": @"3", @"\uFF14": @"4", @"\uFF15": @"5", @"\uFF16": @"6", @"\uFF17": @"7", @"\uFF18": @"8", @"\uFF19": @"9",
                           // Arabic-indic digit 0 to 9
-                          @"0", @"\u0660", @"1", @"\u0661", @"2", @"\u0662", @"3", @"\u0663", @"4", @"\u0664", @"5", @"\u0665", @"6", @"\u0666", @"7", @"\u0667", @"8", @"\u0668", @"9", @"\u0669",
+                          @"\u0660": @"0", @"\u0661": @"1", @"\u0662": @"2", @"\u0663": @"3", @"\u0664": @"4", @"\u0665": @"5", @"\u0666": @"6", @"\u0667": @"7", @"\u0668": @"8", @"\u0669": @"9",
                           // Eastern-Arabic digit 0 to 9
-                          @"0", @"\u06F0", @"1", @"\u06F1",  @"2", @"\u06F2", @"3", @"\u06F3", @"4", @"\u06F4", @"5", @"\u06F5", @"6", @"\u06F6", @"7", @"\u06F7", @"8", @"\u06F8", @"9", @"\u06F9", nil];
+                          @"\u06F0": @"0", @"\u06F1": @"1",  @"\u06F2": @"2", @"\u06F3": @"3", @"\u06F4": @"4", @"\u06F5": @"5", @"\u06F6": @"6", @"\u06F7": @"7", @"\u06F8": @"8", @"\u06F9": @"9"};
     }
     return DIGIT_MAPPINGS;
 }
@@ -489,42 +499,38 @@ static NSDictionary *DIGIT_MAPPINGS;
 - (void)initNormalizationMappings
 {
     if (!DIALLABLE_CHAR_MAPPINGS) {
-        DIALLABLE_CHAR_MAPPINGS = [NSDictionary dictionaryWithObjectsAndKeys:
-                                   @"0", @"0", @"1", @"1", @"2", @"2", @"3", @"3", @"4", @"4", @"5", @"5", @"6", @"6", @"7", @"7", @"8", @"8", @"9", @"9",
-                                   @"+", @"+", @"*", @"*", nil];
+        DIALLABLE_CHAR_MAPPINGS = @{@"0": @"0", @"1": @"1", @"2": @"2", @"3": @"3", @"4": @"4", @"5": @"5", @"6": @"6", @"7": @"7", @"8": @"8", @"9": @"9",
+                                   @"+": @"+", @"*": @"*"};
     }
     
     if (!ALPHA_MAPPINGS) {
-        ALPHA_MAPPINGS = [NSDictionary dictionaryWithObjectsAndKeys:
-                          @"2", @"A", @"2", @"B", @"2", @"C", @"3", @"D", @"3", @"E", @"3", @"F", @"4", @"G", @"4", @"H", @"4", @"I", @"5", @"J",
-                          @"5", @"K", @"5", @"L", @"6", @"M", @"6", @"N", @"6", @"O", @"7", @"P", @"7", @"Q", @"7", @"R", @"7", @"S", @"8", @"T",
-                          @"8", @"U", @"8", @"V", @"9", @"W", @"9", @"X", @"9", @"Y", @"9", @"Z", nil];
+        ALPHA_MAPPINGS = @{@"A": @"2", @"B": @"2", @"C": @"2", @"D": @"3", @"E": @"3", @"F": @"3", @"G": @"4", @"H": @"4", @"I": @"4", @"J": @"5",
+                          @"K": @"5", @"L": @"5", @"M": @"6", @"N": @"6", @"O": @"6", @"P": @"7", @"Q": @"7", @"R": @"7", @"S": @"7", @"T": @"8",
+                          @"U": @"8", @"V": @"8", @"W": @"9", @"X": @"9", @"Y": @"9", @"Z": @"9"};
     }
     
     if (!ALL_NORMALIZATION_MAPPINGS) {
-        ALL_NORMALIZATION_MAPPINGS = [NSDictionary dictionaryWithObjectsAndKeys:
-                                      @"0", @"0", @"1", @"1", @"2", @"2", @"3", @"3", @"4", @"4", @"5", @"5", @"6", @"6", @"7", @"7", @"8", @"8", @"9", @"9",
+        ALL_NORMALIZATION_MAPPINGS = @{@"0": @"0", @"1": @"1", @"2": @"2", @"3": @"3", @"4": @"4", @"5": @"5", @"6": @"6", @"7": @"7", @"8": @"8", @"9": @"9",
                                       // Fullwidth digit 0 to 9
-                                      @"0", @"\uFF10", @"1", @"\uFF11", @"2", @"\uFF12", @"3", @"\uFF13", @"4", @"\uFF14", @"5", @"\uFF15", @"6", @"\uFF16", @"7", @"\uFF17", @"8", @"\uFF18", @"9", @"\uFF19",
+                                      @"\uFF10": @"0", @"\uFF11": @"1", @"\uFF12": @"2", @"\uFF13": @"3", @"\uFF14": @"4", @"\uFF15": @"5", @"\uFF16": @"6", @"\uFF17": @"7", @"\uFF18": @"8", @"\uFF19": @"9",
                                       // Arabic-indic digit 0 to 9
-                                      @"0", @"\u0660", @"1", @"\u0661", @"2", @"\u0662", @"3", @"\u0663", @"4", @"\u0664", @"5", @"\u0665", @"6", @"\u0666", @"7", @"\u0667", @"8", @"\u0668", @"9", @"\u0669",
+                                      @"\u0660": @"0", @"\u0661": @"1", @"\u0662": @"2", @"\u0663": @"3", @"\u0664": @"4", @"\u0665": @"5", @"\u0666": @"6", @"\u0667": @"7", @"\u0668": @"8", @"\u0669": @"9",
                                       // Eastern-Arabic digit 0 to 9
-                                      @"0", @"\u06F0", @"1", @"\u06F1",  @"2", @"\u06F2", @"3", @"\u06F3", @"4", @"\u06F4", @"5", @"\u06F5", @"6", @"\u06F6", @"7", @"\u06F7", @"8", @"\u06F8", @"9", @"\u06F9",
-                                      @"2", @"A", @"2", @"B", @"2", @"C", @"3", @"D", @"3", @"E", @"3", @"F", @"4", @"G", @"4", @"H", @"4", @"I", @"5", @"J",
-                                      @"5", @"K", @"5", @"L", @"6", @"M", @"6", @"N", @"6", @"O", @"7", @"P", @"7", @"Q", @"7", @"R", @"7", @"S", @"8", @"T",
-                                      @"8", @"U", @"8", @"V", @"9", @"W", @"9", @"X", @"9", @"Y", @"9", @"Z", nil];
+                                      @"\u06F0": @"0", @"\u06F1": @"1",  @"\u06F2": @"2", @"\u06F3": @"3", @"\u06F4": @"4", @"\u06F5": @"5", @"\u06F6": @"6", @"\u06F7": @"7", @"\u06F8": @"8", @"\u06F9": @"9",
+                                      @"A": @"2", @"B": @"2", @"C": @"2", @"D": @"3", @"E": @"3", @"F": @"3", @"G": @"4", @"H": @"4", @"I": @"4", @"J": @"5",
+                                      @"K": @"5", @"L": @"5", @"M": @"6", @"N": @"6", @"O": @"6", @"P": @"7", @"Q": @"7", @"R": @"7", @"S": @"7", @"T": @"8",
+                                      @"U": @"8", @"V": @"8", @"W": @"9", @"X": @"9", @"Y": @"9", @"Z": @"9"};
     }
     
     if (!ALL_PLUS_NUMBER_GROUPING_SYMBOLS) {
-        ALL_PLUS_NUMBER_GROUPING_SYMBOLS = [NSDictionary dictionaryWithObjectsAndKeys:
-                                            @"0", @"0", @"1", @"1", @"2", @"2", @"3", @"3", @"4", @"4", @"5", @"5", @"6", @"6", @"7", @"7", @"8", @"8", @"9", @"9",
-                                            @"A", @"A", @"B", @"B", @"C", @"C", @"D", @"D", @"E", @"E", @"F", @"F", @"G", @"G", @"H", @"H", @"I", @"I", @"J", @"J",
-                                            @"K", @"K", @"L", @"L", @"M", @"M", @"N", @"N", @"O", @"O", @"P", @"P", @"Q", @"Q", @"R", @"R", @"S", @"S", @"T", @"T",
-                                            @"U", @"U", @"V", @"V", @"W", @"W", @"X", @"X", @"Y", @"Y", @"Z", @"Z", @"A", @"a", @"B", @"b", @"C", @"c", @"D", @"d",
-                                            @"E", @"e", @"F", @"f", @"G", @"g", @"H", @"h", @"I", @"i", @"J", @"j", @"K", @"k", @"L", @"l", @"M", @"m", @"N", @"n",
-                                            @"O", @"o", @"P", @"p", @"Q", @"q", @"R", @"r", @"S", @"s", @"T", @"t", @"U", @"u", @"V", @"v", @"W", @"w", @"X", @"x",
-                                            @"Y", @"y", @"Z", @"z", @"-", @"-", @"-", @"\uFF0D", @"-", @"\u2010", @"-", @"\u2011", @"-", @"\u2012", @"-", @"\u2013", @"-", @"\u2014", @"-", @"\u2015",
-                                            @"-", @"\u2212", @"/", @"/", @"/", @"\uFF0F", @" ", @" ", @" ", @"\u3000", @" ", @"\u2060", @".", @".", @".", @"\uFF0E", nil];
+        ALL_PLUS_NUMBER_GROUPING_SYMBOLS = @{@"0": @"0", @"1": @"1", @"2": @"2", @"3": @"3", @"4": @"4", @"5": @"5", @"6": @"6", @"7": @"7", @"8": @"8", @"9": @"9",
+                                            @"A": @"A", @"B": @"B", @"C": @"C", @"D": @"D", @"E": @"E", @"F": @"F", @"G": @"G", @"H": @"H", @"I": @"I", @"J": @"J",
+                                            @"K": @"K", @"L": @"L", @"M": @"M", @"N": @"N", @"O": @"O", @"P": @"P", @"Q": @"Q", @"R": @"R", @"S": @"S", @"T": @"T",
+                                            @"U": @"U", @"V": @"V", @"W": @"W", @"X": @"X", @"Y": @"Y", @"Z": @"Z", @"a": @"A", @"b": @"B", @"c": @"C", @"d": @"D",
+                                            @"e": @"E", @"f": @"F", @"g": @"G", @"h": @"H", @"i": @"I", @"j": @"J", @"k": @"K", @"l": @"L", @"m": @"M", @"n": @"N",
+                                            @"o": @"O", @"p": @"P", @"q": @"Q", @"r": @"R", @"s": @"S", @"t": @"T", @"u": @"U", @"v": @"V", @"w": @"W", @"x": @"X",
+                                            @"y": @"Y", @"z": @"Z", @"-": @"-", @"\uFF0D": @"-", @"\u2010": @"-", @"\u2011": @"-", @"\u2012": @"-", @"\u2013": @"-", @"\u2014": @"-", @"\u2015": @"-",
+                                            @"\u2212": @"-", @"/": @"/", @"\uFF0F": @"/", @" ": @" ", @"\u3000": @" ", @"\u2060": @" ", @".": @".", @"\uFF0E": @"."};
     }
 }
 
@@ -748,8 +754,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self getLengthOfGeographicalAreaCode:phoneNumber];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL) {
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
         }
@@ -827,8 +832,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self getLengthOfNationalDestinationCode:phoneNumber];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL) {
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
         }
@@ -860,7 +864,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     // NOTE: On IE the first group that is supposed to be the empty string does
     // not appear in the array of number groups... so make the result on non-IE
     // browsers to be that of IE.
-    if ([numberGroups count] > 0 && ((NSString *)[numberGroups objectAtIndex:0]).length <= 0) {
+    if ([numberGroups count] > 0 && ((NSString *)numberGroups[0]).length <= 0) {
         [numberGroups removeObjectAtIndex:0];
     }
     
@@ -889,10 +893,10 @@ static NSDictionary *DIGIT_MAPPINGS;
         //
         // TODO: Investigate the possibility of better modeling the metadata to make
         // it easier to obtain the NDC.
-        return (int)((NSString *)[numberGroups objectAtIndex:2]).length + 1;
+        return (int)((NSString *)numberGroups[2]).length + 1;
     }
     
-    return (int)((NSString *)[numberGroups objectAtIndex:1]).length;
+    return (int)((NSString *)numberGroups[1]).length;
 }
 
 
@@ -922,7 +926,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     for (unsigned int i = 0; i<numberLength; ++i)
     {
         character = [sourceString characterAtIndex:i];
-        newDigit = [normalizationReplacements objectForKey:[[NSString stringWithFormat: @"%C", character] uppercaseString]];
+        newDigit = normalizationReplacements[[[NSString stringWithFormat: @"%C", character] uppercaseString]];
         if (newDigit != nil)
         {
             [normalizedNumber appendString:newDigit];
@@ -1044,8 +1048,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self format:phoneNumber numberFormat:numberFormat];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -1091,7 +1094,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     // region for performance reasons. For example, for NANPA regions it will be
     // contained in the metadata for US.
     NSArray *regionCodeArray = [helper regionCodeFromCountryCode:countryCallingCode];
-    NSString *regionCode = [regionCodeArray objectAtIndex:0];
+    NSString *regionCode = regionCodeArray[0];
     
     // Metadata cannot be nil because the country calling code is valid (which
     // means that the region code cannot be ZZ and must be one of our supported
@@ -1128,8 +1131,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatByPattern:number numberFormat:numberFormat userDefinedFormats:userDefinedFormats];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -1154,7 +1156,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     NSArray *regionCodes = [helper regionCodeFromCountryCode:countryCallingCode];
     NSString *regionCode = nil;
     if (regionCodes != nil && regionCodes.count > 0) {
-        regionCode = [regionCodes objectAtIndex:0];
+        regionCode = regionCodes[0];
     }
     
     // Metadata cannot be nil because the country calling code is valid
@@ -1223,8 +1225,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatNationalNumberWithCarrierCode:number carrierCode:carrierCode];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL) {
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
         }
@@ -1300,8 +1301,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatNationalNumberWithCarrierCode:number carrierCode:fallbackCarrierCode];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL) {
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
         }
@@ -1339,8 +1339,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatNumberForMobileDialing:number regionCallingFrom:regionCallingFrom withFormatting:withFormatting];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -1435,8 +1434,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatOutOfCountryCallingNumber:number regionCallingFrom:regionCallingFrom];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -1561,8 +1559,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatInOriginalFormat:number regionCallingFrom:regionCallingFrom];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -1791,8 +1788,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self formatOutOfCountryKeepingAlphaChars:number regionCallingFrom:regionCallingFrom];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -2381,7 +2377,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     }
     
     if ([regionCodes count] == 1) {
-        return [regionCodes objectAtIndex:0];
+        return regionCodes[0];
     } else {
         return [self getRegionCodeForNumberFromRegionList:phoneNumber regionCodes:regionCodes];
     }
@@ -2403,7 +2399,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     NBMetadataHelper *helper = [[NBMetadataHelper alloc] init];
     
     for (unsigned int i = 0; i<regionCodesCount; i++) {
-        NSString *regionCode = [regionCodes objectAtIndex:i];
+        NSString *regionCode = regionCodes[i];
         NBPhoneMetaData *metadata = [helper getMetadataForRegion:regionCode];
         
         if ([NBMetadataHelper hasValue:metadata.leadingDigits]) {
@@ -2432,7 +2428,7 @@ static NSDictionary *DIGIT_MAPPINGS;
 {
     NBMetadataHelper *helper = [[NBMetadataHelper alloc] init];
     NSArray *regionCodes = [helper regionCodeFromCountryCode:countryCallingCode];
-    return regionCodes == nil ? UNKNOWN_REGION_ : [regionCodes objectAtIndex:0];
+    return regionCodes == nil ? UNKNOWN_REGION_ : regionCodes[0];
 }
 
 
@@ -2496,8 +2492,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     NBPhoneMetaData *metadata = [helper getMetadataForRegion:regionCode];
     
     if (metadata == nil) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"Invalid region code:%@", regionCode]
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Invalid region code:%@", regionCode]};
         if (error != NULL) {
             (*error) = [NSError errorWithDomain:@"INVALID_REGION_CODE" code:0 userInfo:userInfo];
         }
@@ -2562,7 +2557,7 @@ static NSDictionary *DIGIT_MAPPINGS;
 {
     BOOL isExists = NO;
     NBMetadataHelper *helper = [[NBMetadataHelper alloc] init];
-    NSArray *res = [helper regionCodeFromCountryCode:[NSNumber numberWithUnsignedInteger:NANPA_COUNTRY_CODE_]];
+    NSArray *res = [helper regionCodeFromCountryCode:@(NANPA_COUNTRY_CODE_)];
     
     for (NSString *inRegionCode in res) {
         if ([inRegionCode isEqualToString:regionCode.uppercaseString]) {
@@ -2636,8 +2631,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self isPossibleNumber:number];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -2709,8 +2703,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self isPossibleNumberWithReason:number];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -2806,7 +2799,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     NBPhoneNumber *numberCopy = [number copy];
     NSNumber *nationalNumber = number.nationalNumber;
     do {
-        nationalNumber = [NSNumber numberWithLongLong:(long long)floor(nationalNumber.unsignedLongLongValue / 10)];
+        nationalNumber = @((long long)floor(nationalNumber.unsignedLongLongValue / 10));
         numberCopy.nationalNumber = [nationalNumber copy];
         if ([nationalNumber isEqualToNumber:@0] || [self isPossibleNumberWithReason:numberCopy] == NBEValidationResultTOO_SHORT) {
             return NO;
@@ -2843,7 +2836,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     
     for (unsigned int i = 1; i <= MAX_LENGTH_COUNTRY_CODE_ && i <= numberLength; ++i) {
         NSString *subNumber = [fullNumber substringWithRange:NSMakeRange(0, i)];
-        NSNumber *potentialCountryCode = [NSNumber numberWithInteger:[subNumber integerValue]];
+        NSNumber *potentialCountryCode = @([subNumber integerValue]);
         
         NSArray *regionCodes = [helper regionCodeFromCountryCode:potentialCountryCode];
         if (regionCodes != nil && regionCodes.count > 0) {
@@ -2930,8 +2923,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     
     if (countryCodeSource != NBECountryCodeSourceFROM_DEFAULT_COUNTRY) {
         if (fullNumber.length <= MIN_LENGTH_FOR_NSN_) {
-            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"TOO_SHORT_AFTER_IDD:%@", fullNumber]
-                                                                 forKey:NSLocalizedDescriptionKey];
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"TOO_SHORT_AFTER_IDD:%@", fullNumber]};
             if (error != NULL) {
                 (*error) = [NSError errorWithDomain:@"TOO_SHORT_AFTER_IDD" code:0 userInfo:userInfo];
             }
@@ -2947,8 +2939,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         
         // If this fails, they must be using a strange country calling code that we
         // don't recognize, or that doesn't exist.
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"INVALID_COUNTRY_CODE:%@", potentialCountryCode]
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"INVALID_COUNTRY_CODE:%@", potentialCountryCode]};
         if (error != NULL) {
             (*error) = [NSError errorWithDomain:@"INVALID_COUNTRY_CODE" code:0 userInfo:userInfo];
         }
@@ -2980,7 +2971,7 @@ static NSDictionary *DIGIT_MAPPINGS;
                 [self testNumberLengthAgainstPattern:possibleNumberPattern number:fullNumber] == NBEValidationResultTOO_LONG) {
                 (*nationalNumber) = [(*nationalNumber) stringByAppendingString:potentialNationalNumberStr];
                 if (keepRawInput) {
-                    (*phoneNumber).countryCodeSource = [NSNumber numberWithInt:NBECountryCodeSourceFROM_NUMBER_WITHOUT_PLUS_SIGN];
+                    (*phoneNumber).countryCodeSource = @(NBECountryCodeSourceFROM_NUMBER_WITHOUT_PLUS_SIGN);
                 }
                 (*phoneNumber).countryCode = defaultCountryCode;
                 return defaultCountryCode;
@@ -3013,7 +3004,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     NSString *numberStr = [(*number) copy];
     
     if ([self stringPositionByRegex:numberStr regex:iddPattern] == 0) {
-        NSTextCheckingResult *matched = [[self matchesByRegex:numberStr regex:iddPattern] objectAtIndex:0];
+        NSTextCheckingResult *matched = [self matchesByRegex:numberStr regex:iddPattern][0];
         NSString *matchedString = [numberStr substringWithRange:matched.range];
         unsigned int matchEnd = (unsigned int)matchedString.length;
         NSString *remainString = [numberStr substringFromIndex:matchEnd];
@@ -3021,8 +3012,8 @@ static NSDictionary *DIGIT_MAPPINGS;
         NSRegularExpression *currentPattern = CAPTURING_DIGIT_PATTERN;
         NSArray *matchedGroups = [currentPattern matchesInString:remainString options:0 range:NSMakeRange(0, remainString.length)];
         
-        if (matchedGroups && [matchedGroups count] > 0 && [matchedGroups objectAtIndex:0] != nil) {
-            NSString *digitMatched = [remainString substringWithRange:((NSTextCheckingResult*)[matchedGroups objectAtIndex:0]).range];
+        if (matchedGroups && [matchedGroups count] > 0 && matchedGroups[0] != nil) {
+            NSString *digitMatched = [remainString substringWithRange:((NSTextCheckingResult*)matchedGroups[0]).range];
             if (digitMatched.length > 0) {
                 NSString *normalizedGroup = [self normalizeDigitsOnly:digitMatched];
                 if ([normalizedGroup isEqualToString:@"0"]) {
@@ -3111,7 +3102,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     NSArray *prefixMatcher = [currentPattern matchesInString:numberStr options:0 range:NSMakeRange(0, numberLength)];
     if (prefixMatcher && [prefixMatcher count] > 0) {
         NSString *nationalNumberRule = metadata.generalDesc.nationalNumberPattern;
-        NSTextCheckingResult *firstMatch = [prefixMatcher objectAtIndex:0];
+        NSTextCheckingResult *firstMatch = prefixMatcher[0];
         NSString *firstMatchString = [numberStr substringWithRange:firstMatch.range];
         
         // prefixMatcher[numOfGroups] == null implies nothing was captured by the
@@ -3175,7 +3166,7 @@ static NSDictionary *DIGIT_MAPPINGS;
     // number, we assume it is an extension.
     if (mStart >= 0 && [self isViablePhoneNumber:[numberStr substringWithRange:NSMakeRange(0, mStart)]]) {
         // The numbers are captured into groups in the regular expression.
-        NSTextCheckingResult *firstMatch = [self matcheFirstByRegex:numberStr regex:EXTN_PATTERN];
+        NSTextCheckingResult *firstMatch = [self matchFirstByRegex:numberStr regex:EXTN_PATTERN];
         unsigned int matchedGroupsLength = (unsigned int)[firstMatch numberOfRanges];
         
         for (unsigned int i=1; i<matchedGroupsLength; i++) {
@@ -3329,8 +3320,7 @@ static NSDictionary *DIGIT_MAPPINGS;
 {
     if ([self isValidRegionCode:defaultRegion] == NO) {
         if (numberToParse.length > 0 && [numberToParse hasPrefix:@"+"] == NO) {
-            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"Invalid country code:%@", numberToParse]
-                                                                 forKey:NSLocalizedDescriptionKey];
+            NSDictionary *userInfo = @{NSLocalizedDescriptionKey: [NSString stringWithFormat:@"Invalid country code:%@", numberToParse]};
             if (error != NULL) {
                 (*error) = [NSError errorWithDomain:@"INVALID_COUNTRY_CODE" code:0 userInfo:userInfo];
             }
@@ -3518,7 +3508,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         phoneNumber.italianLeadingZero = YES;
     }
     
-    phoneNumber.nationalNumber =  [NSNumber numberWithLongLong:[normalizedNationalNumberStr longLongValue]];
+    phoneNumber.nationalNumber =  @([normalizedNationalNumberStr longLongValue]);
     return phoneNumber;
 }
 
@@ -3625,8 +3615,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self isNumberMatch:firstNumberIn second:secondNumberIn];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }
@@ -3800,8 +3789,7 @@ static NSDictionary *DIGIT_MAPPINGS;
         res = [self canBeInternationallyDialled:number];
     }
     @catch (NSException *exception) {
-        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:exception.reason
-                                                             forKey:NSLocalizedDescriptionKey];
+        NSDictionary *userInfo = @{NSLocalizedDescriptionKey: exception.reason};
         if (error != NULL)
             (*error) = [NSError errorWithDomain:exception.name code:0 userInfo:userInfo];
     }

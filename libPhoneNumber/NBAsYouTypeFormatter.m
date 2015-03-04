@@ -37,7 +37,7 @@
 
 @implementation NBAsYouTypeFormatter
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -259,17 +259,17 @@
  * @constructor
  */
 
-- (id)initWithRegionCode:(NSString*)regionCode
+- (instancetype)initWithRegionCode:(NSString*)regionCode
 {
 	return [self initWithRegionCode:regionCode bundle:[NSBundle mainBundle]];
 }
 
-- (id)initWithRegionCodeForTest:(NSString*)regionCode
+- (instancetype)initWithRegionCodeForTest:(NSString*)regionCode
 {
 	return [self initWithRegionCodeForTest:regionCode bundle:[NSBundle mainBundle]];
 }
 
-- (id)initWithRegionCode:(NSString*)regionCode bundle:(NSBundle *)bundle
+- (instancetype)initWithRegionCode:(NSString*)regionCode bundle:(NSBundle *)bundle
 {
     self = [self init];
 	if (self) {
@@ -299,7 +299,7 @@
 
 }
 
-- (id)initWithRegionCodeForTest:(NSString*)regionCode bundle:(NSBundle *)bundle
+- (instancetype)initWithRegionCodeForTest:(NSString*)regionCode bundle:(NSBundle *)bundle
 {
 	self = [self init];
     
@@ -1172,7 +1172,7 @@
         normalizedChar = nextChar;
         [self.accruedInputWithoutFormatting_ appendString:nextChar];
     } else {
-        normalizedChar = [[self.phoneUtil_ DIGIT_MAPPINGS] objectForKey:nextChar];
+        normalizedChar = [self.phoneUtil_ DIGIT_MAPPINGS][nextChar];
         if (!normalizedChar) return @"";
         
         [self.accruedInputWithoutFormatting_ appendString:normalizedChar];

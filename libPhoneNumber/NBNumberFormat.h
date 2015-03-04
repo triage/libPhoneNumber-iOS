@@ -17,6 +17,6 @@
 /* 6 */ @property (nonatomic, assign) BOOL nationalPrefixOptionalWhenFormatting;
 /* 5 */ @property (nonatomic, strong) NSString *domesticCarrierCodeFormattingRule;
 
-- (id)initWithPattern:(NSString *)pattern withFormat:(NSString *)format withLeadingDigitsPatterns:(NSMutableArray *)leadingDigitsPatterns withNationalPrefixFormattingRule:(NSString *)nationalPrefixFormattingRule whenFormatting:(BOOL)nationalPrefixOptionalWhenFormatting withDomesticCarrierCodeFormattingRule:(NSString *)domesticCarrierCodeFormattingRule;
+- (instancetype)initWithPattern:(NSString *)pattern withFormat:(NSString *)format withLeadingDigitsPatterns:(NSMutableArray *)leadingDigitsPatterns withNationalPrefixFormattingRule:(NSString *)nationalPrefixFormattingRule whenFormatting:(BOOL)nationalPrefixOptionalWhenFormatting withDomesticCarrierCodeFormattingRule:(NSString *)domesticCarrierCodeFormattingRule;
 
 @end

@@ -20,7 +20,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 @implementation NBPhoneMetaDataGenerator
 
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     
@@ -39,7 +39,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     @try {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *documentsDirectory = paths[0];
         NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"src"];
         
         NSError* error = nil;
@@ -65,7 +65,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 - (void)createClassWithDictionary:(NSDictionary*)data name:(NSString*)name isTestData:(BOOL)isTest
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:@"src"];
     
     NSString *codeStringHeader = [self generateSourceCodeWith:data name:name type:0 isTestData:isTest];
@@ -93,13 +93,13 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 - (NSDictionary*)mappingObject:(NSDictionary*)parsedJSONData
 {
     NSMutableDictionary *resMedata = [[NSMutableDictionary alloc] init];
-    NSDictionary *countryCodeToRegionCodeMap = [parsedJSONData objectForKey:@"countryCodeToRegionCodeMap"];
-    NSDictionary *countryToMetadata = [parsedJSONData objectForKey:@"countryToMetadata"];
+    NSDictionary *countryCodeToRegionCodeMap = parsedJSONData[@"countryCodeToRegionCodeMap"];
+    NSDictionary *countryToMetadata = parsedJSONData[@"countryToMetadata"];
     NSLog(@"- countryCodeToRegionCodeMap count [%zu]", (unsigned long)[countryCodeToRegionCodeMap count]);
     NSLog(@"- countryToMetadata          count [%zu]", (unsigned long)[countryToMetadata count]);
     
-    [resMedata setObject:countryCodeToRegionCodeMap forKey:@"countryCodeToRegionCodeMap"];
-    [resMedata setObject:countryToMetadata forKey:@"countryToMetadata"];
+    resMedata[@"countryCodeToRegionCodeMap"] = countryCodeToRegionCodeMap;
+    resMedata[@"countryToMetadata"] = countryToMetadata;
     
     return resMedata;
 }
@@ -131,7 +131,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 - (NSString *)documentsDirectory
 {
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	return [paths objectAtIndex:0];
+	return paths[0];
 }
 
 
@@ -172,7 +172,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     NSMutableString *contents = [[NSMutableString alloc] init];
     
-    NSDictionary *metadata = [data objectForKey:@"countryToMetadata"];
+    NSDictionary *metadata = data[@"countryToMetadata"];
     
     if (type == 0) {
         NSArray *allKeys = metadata.allKeys;
@@ -195,7 +195,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         [contents appendString:@"#import \"NBNumberFormat.h\"\n\n"];
         
         for (NSString *key in allKeys) {
-            NSArray *currentMetadata = [metadata objectForKey:key];
+            NSArray *currentMetadata = metadata[key];
             NSString *className = [NSString stringWithFormat:@"%@%@", classPrefix, key];
             [contents appendFormat:@"@implementation %@\n", className];
             [contents appendString:@"- (id)init\n"];
@@ -248,7 +248,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 {
     NSMutableString *contents = [[NSMutableString alloc] init];
     
-    NSDictionary *mapCN2CCode = [data objectForKey:@"countryCodeToRegionCodeMap"];
+    NSDictionary *mapCN2CCode = data[@"countryCodeToRegionCodeMap"];
     NSArray *allCallingCodeKey = mapCN2CCode.allKeys;
     
     if (type == 0) {
@@ -268,7 +268,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         [contents appendString:@"        kMapCCode2CN = [[NSMutableDictionary alloc] init];\n"];
         
         for (NSString *callingKey in allCallingCodeKey) {
-            NSArray *countryCodeArray = [mapCN2CCode objectForKey:callingKey];
+            NSArray *countryCodeArray = mapCN2CCode[callingKey];
             [contents appendString:@"\n"];
             [contents appendFormat:@"        NSMutableArray *countryCode%@Array = [[NSMutableArray alloc] init];\n", callingKey];
             for (NSString *code in countryCodeArray) {

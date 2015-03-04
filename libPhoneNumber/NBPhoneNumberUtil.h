@@ -20,6 +20,12 @@
 + (NBPhoneNumberUtil*)sharedInstanceForTest __attribute__((deprecated));
 + (NBPhoneNumberUtil*)sharedInstanceForTestWithBundle:(NSBundle *)bundle __attribute__((deprecated));
 
+/*
+ Convenince method to parse the phone number in the default region specified
+ in countryCodeByCarrier. This will probably be the most likely use-case scenario.
+ */
++ (NBPhoneNumber *) parsePhoneNumber:(NSString *)phoneNumber error:(NSError **)error;
+
 - (instancetype)initWithBundle:(NSBundle *)bundle metaData:(NSString *)metaData __attribute__((deprecated));
 
 // regular expressions
@@ -39,7 +45,7 @@
 - (NSString*)extractPossibleNumber:(NSString*)phoneNumber;
 - (NSNumber*)extractCountryCode:(NSString*)fullNumber nationalNumber:(NSString**)nationalNumber;
 #if TARGET_OS_IPHONE
-- (NSString *)countryCodeByCarrier;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *countryCodeByCarrier;
 #endif
 
 - (NSString*)getNddPrefixForRegion:(NSString*)regionCode stripNonDigits:(BOOL)stripNonDigits;

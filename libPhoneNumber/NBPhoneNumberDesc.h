@@ -14,6 +14,6 @@
 /* 3 */ @property (nonatomic, strong, readwrite) NSString *possibleNumberPattern;
 /* 6 */ @property (nonatomic, strong, readwrite) NSString *exampleNumber;
 
-- (id)initWithNationalNumberPattern:(NSString *)nnp withPossibleNumberPattern:(NSString *)pnp withExample:(NSString *)exp;
+- (instancetype)initWithNationalNumberPattern:(NSString *)nnp withPossibleNumberPattern:(NSString *)pnp withExample:(NSString *)exp;
 
 @end
